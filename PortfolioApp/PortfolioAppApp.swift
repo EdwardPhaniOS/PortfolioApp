@@ -9,12 +9,20 @@ import SwiftUI
 
 @main
 struct PortfolioAppApp: App {
-    let persistenceController = PersistenceController.shared
-
+    
+    @StateObject var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationSplitView {
+                SidebarView()
+            } content: {
+                ContentView()
+            } detail: {
+                DetailView()
+            }
+            .environment(\.managedObjectContext, dataController.container.viewContext)
+            .environmentObject(dataController)
         }
     }
 }
