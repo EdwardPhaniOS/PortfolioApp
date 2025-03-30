@@ -10,6 +10,9 @@ import CoreData
 class DataController: ObservableObject {
     
     @Published var selectedFilter: Filter? = Filter.all
+    @Published var selectedIssue: Issue?
+    
+    private var saveTask: Task<Void, Error>?
     
     let container: NSPersistentContainer
     
@@ -23,9 +26,14 @@ class DataController: ObservableObject {
         self.container = NSPersistentCloudKitContainer(name: "Main")
         
         if inMemory {
-            container.persistentStoreDescriptions.forEach { $0.url = URL(filePath: "/dev/null")
-            }
+            container.persistentStoreDescriptions.forEach { $0.url = URL(filePath: "/dev/null") }
         }
+        
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        
+        container.persistentStoreDescriptions.first?.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
+        NotificationCenter.default.addObserver(forName: .NSPersistentStoreRemoteChange, object: container.persistentStoreCoordinator, queue: .main, using: remoteStoreChanged(_:))
         
         container.loadPersistentStores { storeDescription, error in
             if let error {
@@ -87,5 +95,28 @@ class DataController: ObservableObject {
         delete(request2)
         
         save()
+    }
+    
+    func remoteStoreChanged(_ notification: Notification) {
+        objectWillChange.send()
+    }
+    
+    func missingTags(from issue: Issue) -> [Tag] {
+        let request = Tag.fetchRequest()
+        let allTags = (try? container.viewContext.fetch(request)) ?? []
+        
+        let allTagsSet = Set(allTags)
+        let difference = allTagsSet.symmetricDifference(issue.issueTags)
+        
+        return difference.sorted()
+    }
+    
+    func queueSave() {
+        saveTask?.cancel()
+        
+        saveTask = Task { @MainActor in
+            try await Task.sleep(for: .seconds(3))
+            save()
+        }
     }
 }

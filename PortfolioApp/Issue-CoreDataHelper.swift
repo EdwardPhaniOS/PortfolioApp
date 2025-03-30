@@ -32,6 +32,22 @@ extension Issue {
         return result.sorted()
     }
     
+    var issueTagList: String {
+        guard let tags = tags else { return "No tags" }
+        
+        if tags.count == 0 { return "No tags"}
+        
+        return issueTags.map { $0.tagName }.formatted()
+    }
+    
+    var issueStatus: String {
+        if completed {
+            return "Closed"
+        } else {
+            return "Open"
+        }
+    }
+    
     static var example: Issue {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext

@@ -11,6 +11,7 @@ import SwiftUI
 struct PortfolioAppApp: App {
     
     @StateObject var dataController = DataController()
+    @Environment(\.scenePhase) var scenePhase
     
     var body: some Scene {
         WindowGroup {
@@ -23,6 +24,11 @@ struct PortfolioAppApp: App {
             }
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
+            .onChange(of: scenePhase) { oldValue, newValue in
+                if newValue != .active {
+                    dataController.save()
+                }
+            }
         }
     }
 }

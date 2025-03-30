@@ -18,6 +18,9 @@
 		352715C22D8582AA003C16AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B02D8582AA003C16AB /* Preview Assets.xcassets */; };
 		352715C32D8582AA003C16AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B22D8582AA003C16AB /* Assets.xcassets */; };
 		352715C62D858396003C16AB /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715C52D858396003C16AB /* Filter.swift */; };
+		35EC4B612D96EA15009CE385 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC4B602D96EA15009CE385 /* IssueView.swift */; };
+		35EC4B632D96EA1E009CE385 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC4B622D96EA1E009CE385 /* NoIssueView.swift */; };
+		35FB0D372D871807008267EC /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB0D362D871807008267EC /* IssueRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		352715B92D8582AA003C16AB /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		352715BB2D8582AA003C16AB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		352715C52D858396003C16AB /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		35EC4B602D96EA15009CE385 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		35EC4B622D96EA1E009CE385 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
+		35FB0D362D871807008267EC /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +85,11 @@
 				352715B92D8582AA003C16AB /* SidebarView.swift */,
 				352715C52D858396003C16AB /* Filter.swift */,
 				352715B32D8582AA003C16AB /* ContentView.swift */,
+				35FB0D362D871807008267EC /* IssueRow.swift */,
 				352715B42D8582AA003C16AB /* DataController.swift */,
 				352715B52D8582AA003C16AB /* DetailView.swift */,
+				35EC4B602D96EA15009CE385 /* IssueView.swift */,
+				35EC4B622D96EA1E009CE385 /* NoIssueView.swift */,
 				35258D112D86CDFC005FF24A /* Issue-CoreDataHelper.swift */,
 				35258D132D86CF27005FF24A /* Tag-CoreDataHelper.swift */,
 				352715B22D8582AA003C16AB /* Assets.xcassets */,
@@ -171,6 +180,9 @@
 				352715C02D8582AA003C16AB /* PortfolioAppApp.swift in Sources */,
 				35258D122D86CDFC005FF24A /* Issue-CoreDataHelper.swift in Sources */,
 				35258D142D86CF27005FF24A /* Tag-CoreDataHelper.swift in Sources */,
+				35EC4B612D96EA15009CE385 /* IssueView.swift in Sources */,
+				35EC4B632D96EA1E009CE385 /* NoIssueView.swift in Sources */,
+				35FB0D372D871807008267EC /* IssueRow.swift in Sources */,
 				352715C12D8582AA003C16AB /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
