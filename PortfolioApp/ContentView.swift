@@ -20,10 +20,47 @@ struct ContentView: View {
             .onDelete(perform: delete(_:))
         }
         .navigationTitle("Issues")
-        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues, or type # to add tags") { tag in
-            Text(tag.tagName)
+        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues, or type # to add tags", token: {tag in Text(tag.tagName)})
+        .toolbar {
+            Menu {
+                Button(dataController.filterEnable ? "Turn Filter Off" : "Turn Filter On") {
+                    dataController.filterEnable.toggle()
+                }
+                
+                Menu("Sort By") {
+                    Picker("Sort By", selection: $dataController.sortType) {
+                        Text("Date Created").tag(SortType.dateCreated)
+                        Text("Date Modified").tag(SortType.dateModified)
+                    }
+                    
+                    Divider()
+                    
+                    Picker("Sort Order", selection: $dataController.sortNewestFirst) {
+                        Text("Newest to Oldest").tag(true)
+                        Text("Oldest to Newest").tag(false)
+                    }
+                }
+                
+                Picker("Status", selection: $dataController.filterStatus) {
+                    Text("All").tag(Status.all)
+                    Text("Open").tag(Status.open)
+                    Text("Closed").tag(Status.closed)
+                }
+                .disabled(dataController.filterEnable == false)
+                
+                Picker("Priority", selection: $dataController.filterPriority) {
+                    Text("All").tag(-1)
+                    Text("Low").tag(0)
+                    Text("Medium").tag(1)
+                    Text("High").tag(2)
+                }
+                .disabled(dataController.filterEnable == false)
+                
+            } label: {
+                Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+                    .symbolVariant(dataController.filterEnable ? .fill : .none)
+            }
         }
-       
     }
     
     func delete(_ offsets: IndexSet) {
