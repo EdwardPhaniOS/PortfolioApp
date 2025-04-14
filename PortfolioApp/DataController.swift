@@ -8,8 +8,8 @@
 import CoreData
 
 enum SortType: String {
-    case dateCreated = "creationDate"
-    case dateModified = "modificationDate"
+    case createdDate = "creationDate"
+    case updatedDate = "modificationDate"
 }
 
 enum Status {
@@ -22,11 +22,11 @@ class DataController: ObservableObject {
     @Published var selectedIssue: Issue?
     @Published var filterText: String = ""
     @Published var filterTokens: [Tag] = []
-    @Published var filterEnable = true
-    @Published var filterPriority = -1
-    @Published var filterStatus = Status.all
-    @Published var sortType = SortType.dateCreated
-    @Published var sortNewestFirst = true
+    @Published var filterEnable: Bool = true
+    @Published var filterStatus: Status = .all
+    @Published var filterPriority: Int = -1 //-1: any priority
+    @Published var sortType: SortType = .createdDate
+    @Published var sortNewestFirst: Bool = true
     
     private var saveTask: Task<Void, Error>?
     
@@ -39,9 +39,9 @@ class DataController: ObservableObject {
     }
     
     var suggestedFilterTokens: [Tag] {
-//        guard filterText.starts(with: "#") else {
-//            return []
-//        }
+        guard filterText.starts(with: "#") else {
+            return []
+        }
         
         let trimmedFilterText = String(filterText.dropFirst()).trimmingCharacters(in: .whitespaces)
         let request = Tag.fetchRequest()
@@ -108,23 +108,19 @@ class DataController: ObservableObject {
         save()
     }
     
-    private func delete(_ fetchRequest: NSFetchRequest<NSFetchRequestResult>) {
+    func delete(_ fetchRequest: NSFetchRequest<NSFetchRequestResult>) {
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         batchDeleteRequest.resultType = .resultTypeObjectIDs
         
-        if let delete = try? container.viewContext.execute(batchDeleteRequest) as? NSBatchDeleteResult {
-            let changes = [NSDeletedObjectIDsKey: delete.result as? [NSManagedObjectID] ?? []]
+        if let deleteResult = try? container.viewContext.execute(batchDeleteRequest) as? NSBatchDeleteResult {
+            let changes = [NSDeletedObjectIDsKey: deleteResult.result as? [NSManagedObjectID] ?? []]
             NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [container.viewContext])
         }
     }
     
     func deleteAll() {
-        let request1: NSFetchRequest<NSFetchRequestResult> = Tag.fetchRequest()
-        delete(request1)
-        
-        let request2: NSFetchRequest<NSFetchRequestResult> = Issue.fetchRequest()
-        delete(request2)
-        
+        delete(Tag.fetchRequest())
+        delete(Issue.fetchRequest())
         save()
     }
     
@@ -159,7 +155,7 @@ class DataController: ObservableObject {
             let tagPredicate = NSPredicate(format: "tags CONTAINS %@", tag)
             predicates.append(tagPredicate)
         } else {
-            let datePredicate = NSPredicate(format: "modificationDate > %@", filter.minModificationDate as NSDate)
+            let datePredicate = NSPredicate(format: "modificationDate > %@", filter.minUpdatedDate as NSDate)
             predicates.append(datePredicate)
         }
         
@@ -183,8 +179,8 @@ class DataController: ObservableObject {
             }
             
             if filterStatus != .all {
-                let lookForClosed = filterStatus == .closed
-                let statusFilter = NSPredicate(format: "completed = %@", lookForClosed)
+                let completed = filterStatus == .closed
+                let statusFilter = NSPredicate(format: "completed = %@", completed)
                 predicates.append(statusFilter)
             }
         }
@@ -197,4 +193,26 @@ class DataController: ObservableObject {
         return allIssues.sorted()
     }
     
+    func newIssue() {
+        let issue = Issue(context: container.viewContext)
+        issue.title = "New Issue"
+        issue.creationDate = .now
+        issue.priority = 1
+        
+        if let tag = selectedFilter?.tag {
+            issue.addToTags(tag)
+        }
+        
+        save()
+        
+        selectedIssue = issue
+    }
+    
+    func newTag() {
+        let tag = Tag(context: container.viewContext)
+        tag.id = UUID()
+        tag.name = "New tag"
+        
+        save()
+    }
 }

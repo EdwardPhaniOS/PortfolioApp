@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IssueRow: View {
     
-    @EnvironmentObject var dataController: DataController
+//    @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
     
     var body: some View {
@@ -41,7 +41,6 @@ struct IssueRow: View {
                 }
                 .foregroundStyle(.secondary)
             }
-            
         }
     }
 }

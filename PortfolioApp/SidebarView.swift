@@ -9,8 +9,12 @@ import SwiftUI
 
 struct SidebarView: View {
     @EnvironmentObject var dataController: DataController
-    let smartFilters: [Filter] = [.all, .recent]
+    let smartFilter: [Filter] = [.all, .recent]
     
+    @State private var tagToRename: Tag?
+    @State private var renamingTag = false
+    @State private var tagName = ""
+
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags: FetchedResults<Tag>
     
     var tagFilters: [Filter] {
@@ -22,7 +26,7 @@ struct SidebarView: View {
     var body: some View {
         List(selection: $dataController.selectedFilter) {
             Section("Smart Filters") {
-                ForEach(smartFilters) { filter in
+                ForEach(smartFilter) { filter in
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
                     }
@@ -34,17 +38,35 @@ struct SidebarView: View {
                     NavigationLink(value: filter) {
                         Label(filter.name, systemImage: filter.icon)
                             .badge(filter.tag?.tagActiveIssues.count ?? 0)
+                            .contextMenu {
+                                Button {
+                                    rename(filter)
+                                } label: {
+                                    Label("Rename", systemImage: "pencil")
+                                }
+                            }
                     }
                 }.onDelete(perform: delete(_:))
             }
         }
         .toolbar {
+            #if DEBUG
             Button {
                 dataController.deleteAll()
                 dataController.createSampleData()
             } label: {
-                Label("Add sample", systemImage: "flame")
+                Label("Add Sample", systemImage: "flame")
             }
+            #endif
+            
+            Button(action: dataController.newTag) {
+                Label("Add Tag", systemImage: "plus")
+            }
+        }
+        .alert("Rename tag", isPresented: $renamingTag) {
+            TextField("New name", text: $tagName)
+            Button("Cancel", role: .cancel) { }
+            Button("OK", action: completeRename)
         }
     }
     
@@ -54,9 +76,22 @@ struct SidebarView: View {
             dataController.delete(item)
         }
     }
+    
+    func rename(_ filter: Filter) {
+        tagToRename = filter.tag
+        tagName = filter.name
+        renamingTag = true
+    }
+    
+    func completeRename() {
+        tagToRename?.name = tagName
+        dataController.save()
+    }
 }
 
 #Preview {
-    SidebarView()
-        .environmentObject(DataController.preview)
+    NavigationView {
+        SidebarView()
+            .environmentObject(DataController.preview)
+    }
 }

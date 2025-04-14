@@ -20,7 +20,9 @@ struct ContentView: View {
             .onDelete(perform: delete(_:))
         }
         .navigationTitle("Issues")
-        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues, or type # to add tags", token: {tag in Text(tag.tagName)})
+        .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issue, or type # to add tags") { tag in
+            Text(tag.tagName)
+        }
         .toolbar {
             Menu {
                 Button(dataController.filterEnable ? "Turn Filter Off" : "Turn Filter On") {
@@ -29,8 +31,8 @@ struct ContentView: View {
                 
                 Menu("Sort By") {
                     Picker("Sort By", selection: $dataController.sortType) {
-                        Text("Date Created").tag(SortType.dateCreated)
-                        Text("Date Modified").tag(SortType.dateModified)
+                        Text("Created date").tag(SortType.createdDate)
+                        Text("Updated date").tag(SortType.updatedDate)
                     }
                     
                     Divider()
@@ -39,6 +41,7 @@ struct ContentView: View {
                         Text("Newest to Oldest").tag(true)
                         Text("Oldest to Newest").tag(false)
                     }
+                    
                 }
                 
                 Picker("Status", selection: $dataController.filterStatus) {
@@ -57,9 +60,13 @@ struct ContentView: View {
                 .disabled(dataController.filterEnable == false)
                 
             } label: {
-                Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
-                    .symbolVariant(dataController.filterEnable ? .fill : .none)
+                Label("Filter", systemImage: "line.3.horizontal.decrease.circle").symbolVariant(dataController.filterEnable ? .fill : .none)
             }
+            
+            Button(action: dataController.newIssue) {
+                Label("New Issue", systemImage: "square.and.pencil")
+            }
+            
         }
     }
     
@@ -74,6 +81,8 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-        .environmentObject(DataController.preview)
+    NavigationView {
+        ContentView()
+            .environmentObject(DataController.preview)
+    }
 }

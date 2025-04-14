@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 extension Tag {
     var tagID: UUID {
@@ -43,3 +44,4 @@ extension Tag: Comparable {
         }
     }
 }
+
