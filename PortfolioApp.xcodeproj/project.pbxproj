@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		351920302DB2ABF200655D25 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519202F2DB2ABF200655D25 /* Bundle-Decodable.swift */; };
 		35258D122D86CDFC005FF24A /* Issue-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D112D86CDFC005FF24A /* Issue-CoreDataHelper.swift */; };
 		35258D142D86CF27005FF24A /* Tag-CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D132D86CF27005FF24A /* Tag-CoreDataHelper.swift */; };
 		352715BC2D8582AA003C16AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715B32D8582AA003C16AB /* ContentView.swift */; };
@@ -18,12 +19,17 @@
 		352715C22D8582AA003C16AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B02D8582AA003C16AB /* Preview Assets.xcassets */; };
 		352715C32D8582AA003C16AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B22D8582AA003C16AB /* Assets.xcassets */; };
 		352715C62D858396003C16AB /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715C52D858396003C16AB /* Filter.swift */; };
+		356017492DB4E6F700919498 /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 356017472DB4E6F700919498 /* Awards.json */; };
+		3560174A2DB4E6F700919498 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356017482DB4E6F700919498 /* Colors.xcassets */; };
+		3560174C2DB4E86900919498 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560174B2DB4E86900919498 /* Award.swift */; };
+		356017502DB4EF0900919498 /* AwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560174F2DB4EF0900919498 /* AwardView.swift */; };
 		35EC4B612D96EA15009CE385 /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC4B602D96EA15009CE385 /* IssueView.swift */; };
 		35EC4B632D96EA1E009CE385 /* NoIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC4B622D96EA1E009CE385 /* NoIssueView.swift */; };
 		35FB0D372D871807008267EC /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB0D362D871807008267EC /* IssueRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3519202F2DB2ABF200655D25 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		351F24DC2D8488DA00C07C4E /* PortfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PortfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35258D112D86CDFC005FF24A /* Issue-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelper.swift"; sourceTree = "<group>"; };
 		35258D132D86CF27005FF24A /* Tag-CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelper.swift"; sourceTree = "<group>"; };
@@ -37,6 +43,10 @@
 		352715B92D8582AA003C16AB /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		352715BB2D8582AA003C16AB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		352715C52D858396003C16AB /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		356017472DB4E6F700919498 /* Awards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Awards.json; sourceTree = "<group>"; };
+		356017482DB4E6F700919498 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3560174B2DB4E86900919498 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		3560174F2DB4EF0900919498 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
 		35EC4B602D96EA15009CE385 /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
 		35EC4B622D96EA1E009CE385 /* NoIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoIssueView.swift; sourceTree = "<group>"; };
 		35FB0D362D871807008267EC /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -90,8 +100,13 @@
 				352715B52D8582AA003C16AB /* DetailView.swift */,
 				35EC4B602D96EA15009CE385 /* IssueView.swift */,
 				35EC4B622D96EA1E009CE385 /* NoIssueView.swift */,
+				3560174B2DB4E86900919498 /* Award.swift */,
+				3560174F2DB4EF0900919498 /* AwardView.swift */,
 				35258D112D86CDFC005FF24A /* Issue-CoreDataHelper.swift */,
 				35258D132D86CF27005FF24A /* Tag-CoreDataHelper.swift */,
+				3519202F2DB2ABF200655D25 /* Bundle-Decodable.swift */,
+				356017472DB4E6F700919498 /* Awards.json */,
+				356017482DB4E6F700919498 /* Colors.xcassets */,
 				352715B22D8582AA003C16AB /* Assets.xcassets */,
 				352715B72D8582AA003C16AB /* Main.xcdatamodeld */,
 				352715B12D8582AA003C16AB /* Preview Content */,
@@ -161,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				352715C22D8582AA003C16AB /* Preview Assets.xcassets in Resources */,
+				356017492DB4E6F700919498 /* Awards.json in Resources */,
+				3560174A2DB4E6F700919498 /* Colors.xcassets in Resources */,
 				352715C32D8582AA003C16AB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,12 +190,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				352715C62D858396003C16AB /* Filter.swift in Sources */,
+				3560174C2DB4E86900919498 /* Award.swift in Sources */,
 				352715BC2D8582AA003C16AB /* ContentView.swift in Sources */,
 				352715BD2D8582AA003C16AB /* DataController.swift in Sources */,
 				352715BE2D8582AA003C16AB /* DetailView.swift in Sources */,
+				351920302DB2ABF200655D25 /* Bundle-Decodable.swift in Sources */,
 				352715BF2D8582AA003C16AB /* Main.xcdatamodeld in Sources */,
 				352715C02D8582AA003C16AB /* PortfolioAppApp.swift in Sources */,
 				35258D122D86CDFC005FF24A /* Issue-CoreDataHelper.swift in Sources */,
+				356017502DB4EF0900919498 /* AwardView.swift in Sources */,
 				35258D142D86CF27005FF24A /* Tag-CoreDataHelper.swift in Sources */,
 				35EC4B612D96EA15009CE385 /* IssueView.swift in Sources */,
 				35EC4B632D96EA1E009CE385 /* NoIssueView.swift in Sources */,

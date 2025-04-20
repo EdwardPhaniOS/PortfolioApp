@@ -13,12 +13,11 @@ struct ContentView: View {
     @EnvironmentObject var dataController: DataController
     
     var body: some View {
-        List(selection: $dataController.selectedIssue) {
+        List(selection: $dataController.selectedIssue, content: {
             ForEach(dataController.issuesForSelectedFilter()) { issue in
                 IssueRow(issue: issue)
             }
-            .onDelete(perform: delete(_:))
-        }
+        })
         .navigationTitle("Issues")
         .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issue, or type # to add tags") { tag in
             Text(tag.tagName)

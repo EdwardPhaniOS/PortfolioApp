@@ -14,6 +14,8 @@ struct SidebarView: View {
     @State private var tagToRename: Tag?
     @State private var renamingTag = false
     @State private var tagName = ""
+    
+    @State private var showingAward = false
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags: FetchedResults<Tag>
     
@@ -62,12 +64,19 @@ struct SidebarView: View {
             Button(action: dataController.newTag) {
                 Label("Add Tag", systemImage: "plus")
             }
+            
+            Button {
+                showingAward.toggle()
+            } label: {
+                Label("Show awards", systemImage: "rosette")
+            }
         }
         .alert("Rename tag", isPresented: $renamingTag) {
             TextField("New name", text: $tagName)
             Button("Cancel", role: .cancel) { }
             Button("OK", action: completeRename)
         }
+        .sheet(isPresented: $showingAward, content: AwardView.init)
     }
     
     func delete(_ offsets: IndexSet) {
