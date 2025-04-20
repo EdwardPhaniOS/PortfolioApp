@@ -193,6 +193,35 @@ class DataController: ObservableObject {
         return allIssues.sorted()
     }
     
+    func count<T>(request: NSFetchRequest<T>) -> Int {
+        (try? container.viewContext.count(for: request)) ?? 0
+    }
+    
+    func hasEarned(award: Award) -> Bool {
+        switch award.criterion {
+        case "issues":
+            let fetchRequest = Issue.fetchRequest()
+            let awardCount = count(request: fetchRequest)
+            return awardCount >= award.value
+            
+        case "closed":
+            let fetchRequest = Issue.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "completed = true")
+            let awardCount = count(request: fetchRequest)
+            return awardCount >= award.value
+            
+        case "tags":
+            let fetchRequest = Tag.fetchRequest()
+            let awardCount = count(request: fetchRequest)
+            return awardCount >= award.value
+            
+        default:
+            //an unknown award criterion; this should never be allowed
+            //fatalError("Unknown award criterion: \(award.criterion)")
+            return false
+        }
+    }
+    
     func newIssue() {
         let issue = Issue(context: container.viewContext)
         issue.title = "New Issue"
