@@ -18,8 +18,8 @@ struct AwardView: View {
         [GridItem(.adaptive(minimum: 100, maximum: 100))]
     }
     
-    var awardTitle: String {
-        dataController.hasEarned(award: selectedAward) ? "Unlocked \(selectedAward.name)" : "Locked"
+    var awardTitle: LocalizedStringKey {
+        dataController.hasEarned(award: selectedAward) ? LocalizedStringKey("Unlocked \(selectedAward.name)") : LocalizedStringKey("Locked")
     }
     
     var body: some View {

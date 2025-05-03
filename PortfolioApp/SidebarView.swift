@@ -30,7 +30,7 @@ struct SidebarView: View {
             Section("Smart Filters") {
                 ForEach(smartFilter) { filter in
                     NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
+                        Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
                     }
                 }
             }
@@ -55,7 +55,7 @@ struct SidebarView: View {
                             }
                             .accessibilityElement()
                             .accessibilityLabel(filter.name)
-                            .accessibilityHint("\(filter.activeIssuesCount) \(filter.activeIssuesCount > 1 ? "issues" : "issue")")
+                            .accessibilityHint("\(filter.activeIssuesCount) issues")
                     }
                 }.onDelete(perform: delete(_:))
             }
