@@ -29,64 +29,26 @@ struct SidebarView: View {
         List(selection: $dataController.selectedFilter) {
             Section("Smart Filters") {
                 ForEach(smartFilter) { filter in
-                    NavigationLink(value: filter) {
-                        Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
-                    }
+                    SmartFilterRow(filter: filter)
                 }
             }
             
             Section("Tags") {
                 ForEach(tagFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                            .badge(filter.activeIssuesCount)
-                            .contextMenu {
-                                Button {
-                                    rename(filter)
-                                } label: {
-                                    Label("Rename", systemImage: "pencil")
-                                }
-                                
-                                Button(role: .destructive) {
-                                    delete(filter)
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                            }
-                            .accessibilityElement()
-                            .accessibilityLabel(filter.name)
-                            .accessibilityHint("\(filter.activeIssuesCount) issues")
-                    }
+                    UserFilterRow(filter: filter, rename: rename, delete: delete)
                 }.onDelete(perform: delete(_:))
             }
         }
-        .toolbar {
-            #if DEBUG
-            Button {
-                dataController.deleteAll()
-                dataController.createSampleData()
-            } label: {
-                Label("Add Sample", systemImage: "flame")
-            }
-            #endif
-            
-            Button(action: dataController.newTag) {
-                Label("Add Tag", systemImage: "plus")
-            }
-            
-            Button {
-                showingAward.toggle()
-            } label: {
-                Label("Show awards", systemImage: "rosette")
-            }
-        }
+        .toolbar(content: {
+            SidebarViewToolbar(showingAward: $showingAward)
+        })
         .navigationTitle("Filters")
         .alert("Rename tag", isPresented: $renamingTag) {
             TextField("New name", text: $tagName)
             Button("Cancel", role: .cancel) { }
             Button("OK", action: completeRename)
         }
-        .sheet(isPresented: $showingAward, content: AwardView.init)
+        
     }
     
     func delete(_ offsets: IndexSet) {
