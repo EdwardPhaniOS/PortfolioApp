@@ -235,6 +235,7 @@
       }
     },
     "Close Issue" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -703,6 +704,7 @@
       }
     },
     "Re-open Issue" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

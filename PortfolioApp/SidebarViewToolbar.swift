@@ -10,7 +10,7 @@ import SwiftUI
 struct SidebarViewToolbar: View {
     @EnvironmentObject var dataController: DataController
     @Binding var showingAward: Bool
-    
+
     var body: some View {
     #if DEBUG
         Button {
@@ -20,11 +20,10 @@ struct SidebarViewToolbar: View {
             Label("Add Sample", systemImage: "flame")
         }
     #endif
-        
         Button(action: dataController.newTag) {
             Label("Add Tag", systemImage: "plus")
         }
-        
+
         Button {
             showingAward.toggle()
         } label: {
@@ -32,7 +31,6 @@ struct SidebarViewToolbar: View {
         }
         .sheet(isPresented: $showingAward, content: AwardView.init)
     }
-    
 }
 
 #Preview {

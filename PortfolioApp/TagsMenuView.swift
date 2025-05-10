@@ -10,10 +10,10 @@ import SwiftUI
 struct TagsMenuView: View {
     @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
-    
+
     var body: some View {
-        Menu() {
-            //Show selected tags first
+        Menu {
+            // Show selected tags first
             ForEach(issue.issueTags) { tag in
                 Button {
                     issue.removeFromTags(tag)
@@ -21,13 +21,13 @@ struct TagsMenuView: View {
                     Label(tag.tagName, systemImage: "checkmark")
                 }
             }
-            
-            //Now show unselected tags
+
+            // Now show unselected tags
             let otherTags = dataController.missingTags(from: issue)
-            
+
             if otherTags.isEmpty == false {
                 Divider()
-                
+
                 Section("Add Tags") {
                     ForEach(otherTags) { tag in
                         Button(tag.tagName) {

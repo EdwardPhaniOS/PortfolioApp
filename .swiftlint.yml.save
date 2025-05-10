@@ -1,0 +1,8 @@
+included:
+  - PortfolioApp
+excluded:
+  - .git
+  - PortfolioApp.xcodeproj
+disabled_rules:
+- operator_whitespace
+

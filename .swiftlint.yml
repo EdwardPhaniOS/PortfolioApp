@@ -1,0 +1,10 @@
+included:
+  - PortfolioApp
+excluded:
+  - .git
+  - PortfolioApp.xcodeproj
+  - Frameworks/UIKit
+  - Pods
+disabled_rules:
+- operator_whitespace
+

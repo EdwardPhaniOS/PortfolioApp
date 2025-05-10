@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct UserFilterRow: View {
-    
     var filter: Filter
-    
+
     var rename: (Filter) -> Void
     var delete: (Filter) -> Void
-    
+
     var body: some View {
         NavigationLink(value: filter) {
             Label(filter.name, systemImage: filter.icon)
@@ -24,7 +23,7 @@ struct UserFilterRow: View {
                     } label: {
                         Label("Rename", systemImage: "pencil")
                     }
-                    
+
                     Button(role: .destructive) {
                         delete(filter)
                     } label: {
@@ -39,5 +38,5 @@ struct UserFilterRow: View {
 }
 
 #Preview {
-    UserFilterRow(filter: .all, rename: { _ in }, delete:  { _ in })
+    UserFilterRow(filter: .all, rename: { _ in }, delete: { _ in })
 }

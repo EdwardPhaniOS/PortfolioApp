@@ -1,0 +1,6 @@
+included:
+  - PortfolioApp
+excluded:
+  - .git
+  - PortfolioApp.xcodeproj
+  - DerivedData
