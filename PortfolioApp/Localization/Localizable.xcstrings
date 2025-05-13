@@ -234,23 +234,6 @@
         }
       }
     },
-    "Close Issue" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Close Issue"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đóng vấn đề"
-          }
-        }
-      }
-    },
     "Closed" : {
       "localizations" : {
         "en" : {
