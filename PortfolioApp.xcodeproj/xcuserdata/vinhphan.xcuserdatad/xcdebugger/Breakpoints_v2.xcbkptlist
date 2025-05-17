@@ -14,9 +14,9 @@
             filePath = "PortfolioApp/DataController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
-            landmarkName = "hasEarned(award:)"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "newIssue()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

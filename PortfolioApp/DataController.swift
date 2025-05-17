@@ -159,6 +159,7 @@ class DataController: ObservableObject {
     func deleteAll() {
         delete(Tag.fetchRequest())
         delete(Issue.fetchRequest())
+        container.viewContext.reset()
         save()
     }
 
@@ -184,7 +185,7 @@ class DataController: ObservableObject {
             save()
         }
     }
-    
+
     /// Runs a fetch request with various predicates that filter the user's issues based
     /// on tag, title
     /// - Returns: An array of all matching issues
