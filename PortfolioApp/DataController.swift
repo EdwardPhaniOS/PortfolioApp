@@ -48,7 +48,7 @@ class DataController: ObservableObject {
         guard let managedObjectModel = NSManagedObjectModel(contentsOf: url) else {
             fatalError("Failed to load model file.")
         }
-        return model
+        return managedObjectModel
     }()
 
     var suggestedFilterTokens: [Tag] {
