@@ -12,6 +12,7 @@ import XCTest
 class BaseTestCase: XCTestCase {
     var dataController: DataController!
     var managedObjectContext: NSManagedObjectContext!
+    let awards = Award.allAwards
 
     override func setUpWithError() throws {
         dataController = DataController(inMemory: true)

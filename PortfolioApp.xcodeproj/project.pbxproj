@@ -36,6 +36,8 @@
 		35CA35ED2DD4DDBE004AF02F /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA35EB2DD4DDBE004AF02F /* BaseTestCase.swift */; };
 		35CA35EF2DD4E12B004AF02F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA35EE2DD4E12B004AF02F /* AssetTests.swift */; };
 		35FB0D372D871807008267EC /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB0D362D871807008267EC /* IssueRow.swift */; };
+		35FB8B242DD78C0B004F574A /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB8B232DD78C0B004F574A /* TagTests.swift */; };
+		35FB8B262DD84E40004F574A /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FB8B252DD84E40004F574A /* AwardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		35EE64992DC61DCE0029B7BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Awards.json; sourceTree = "<group>"; };
 		35EE649A2DC61DD50029B7BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Awards.json; sourceTree = "<group>"; };
 		35FB0D362D871807008267EC /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
+		35FB8B232DD78C0B004F574A /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
+		35FB8B252DD84E40004F574A /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +237,8 @@
 			children = (
 				35CA35EB2DD4DDBE004AF02F /* BaseTestCase.swift */,
 				35CA35EE2DD4E12B004AF02F /* AssetTests.swift */,
+				35FB8B232DD78C0B004F574A /* TagTests.swift */,
+				35FB8B252DD84E40004F574A /* AwardTests.swift */,
 			);
 			path = PortfolioAppTests;
 			sourceTree = "<group>";
@@ -399,6 +405,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				35CA35EF2DD4E12B004AF02F /* AssetTests.swift in Sources */,
+				35FB8B262DD84E40004F574A /* AwardTests.swift in Sources */,
+				35FB8B242DD78C0B004F574A /* TagTests.swift in Sources */,
 				35CA35ED2DD4DDBE004AF02F /* BaseTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
