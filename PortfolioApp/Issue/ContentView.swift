@@ -20,6 +20,7 @@ struct ContentView: View {
             ForEach(dataController.issuesForSelectedFilter()) { issue in
                 IssueRow(issue: issue)
             }
+            .onDelete(perform: delete)
         })
         .navigationTitle("Issues")
         .searchable(
@@ -36,9 +37,10 @@ struct ContentView: View {
                     Label("Filter", systemImage: "line.3.horizontal.decrease.circle").symbolVariant(filterSymbolVariant)
                 }
 
-                Button(action: dataController.newIssue) {
+                Button(action: dataController.newIssue, label: {
                     Label("New Issue", systemImage: "square.and.pencil")
-                }
+                        .accessibilityIdentifier("New Issue")
+                })
             }
     }
 

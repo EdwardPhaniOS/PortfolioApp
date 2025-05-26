@@ -523,35 +523,18 @@
         }
       }
     },
-    "New issue" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New issue"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vấn đề mới"
-          }
-        }
-      }
-    },
     "New Issue" : {
       "comment" : "Create a new issue",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Recent Issues"
+            "value" : "New Issue"
           }
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Các vấn đề gần đây"
           }
         }
@@ -706,6 +689,12 @@
     "Recent Issues" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent Issues"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
