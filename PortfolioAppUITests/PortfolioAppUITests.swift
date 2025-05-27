@@ -35,13 +35,13 @@ final class PortfolioAppUITests: XCTestCase {
 
     func testCreatingAndDeletingIssue() {
         for tapCount in 1...5 {
-            app.buttons["New Issue"].tap()
-            app.buttons["Issues"].tap()
+            app.buttons["New Issue"].firstMatch.tap()
+            app.buttons["Issues"].firstMatch.tap()
 
             XCTAssertEqual(tapCount, app.cells.count, "Expected \(tapCount) rows in the list")
         }
 
-        for expectedCellCount in 4...0 {
+        for expectedCellCount in (0...4).reversed() {
             app.cells.firstMatch.swipeLeft()
             app.buttons["Delete"].tap()
 
@@ -79,7 +79,7 @@ final class PortfolioAppUITests: XCTestCase {
         app.buttons["Show awards"].tap()
 
         for award in app.scrollViews.buttons.allElementsBoundByIndex {
-            if !app.windows.element.frame.contains(award.frame) {
+            if !app.windows.firstMatch.frame.contains(award.frame) {
                 app.swipeUp()
             }
 
