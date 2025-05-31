@@ -17,6 +17,7 @@
 		352715C22D8582AA003C16AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B02D8582AA003C16AB /* Preview Assets.xcassets */; };
 		352715C32D8582AA003C16AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352715B22D8582AA003C16AB /* Assets.xcassets */; };
 		352715C62D858396003C16AB /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715C52D858396003C16AB /* Filter.swift */; };
+		3528E56E2DEAD96E00D6CF23 /* SidebarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3528E56D2DEAD96E00D6CF23 /* SidebarViewModel.swift */; };
 		354981A52DE20F66009BC2F0 /* PortfolioAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354981A22DE20F66009BC2F0 /* PortfolioAppUITests.swift */; };
 		354981A62DE20F66009BC2F0 /* PortfolioAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354981A32DE20F66009BC2F0 /* PortfolioAppUITestsLaunchTests.swift */; };
 		355A177A2DC1235600D24A4C /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 355A17792DC1235600D24A4C /* Awards.json */; };
@@ -78,6 +79,7 @@
 		352715B82D8582AA003C16AB /* PortfolioAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppApp.swift; sourceTree = "<group>"; };
 		352715BB2D8582AA003C16AB /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		352715C52D858396003C16AB /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		3528E56D2DEAD96E00D6CF23 /* SidebarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewModel.swift; sourceTree = "<group>"; };
 		354981972DE20EAD009BC2F0 /* PortfolioAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		354981A22DE20F66009BC2F0 /* PortfolioAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppUITests.swift; sourceTree = "<group>"; };
 		354981A32DE20F66009BC2F0 /* PortfolioAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 			children = (
 				352715C52D858396003C16AB /* Filter.swift */,
 				35A0B87C2DD3886000BB9EA3 /* SidebarView.swift */,
+				3528E56D2DEAD96E00D6CF23 /* SidebarViewModel.swift */,
 				35A0B87D2DD3886000BB9EA3 /* SidebarViewToolbar.swift */,
 				352560FF2DC90354007855BE /* SmartFilterRow.swift */,
 				35A0B87F2DD3886000BB9EA3 /* UserFilterRow.swift */,
@@ -471,6 +474,7 @@
 				35258D142D86CF27005FF24A /* Tag-CoreDataHelper.swift in Sources */,
 				35FB0D372D871807008267EC /* IssueRow.swift in Sources */,
 				35A0B8932DD38B8700BB9EA3 /* ContentViewToolbar.swift in Sources */,
+				3528E56E2DEAD96E00D6CF23 /* SidebarViewModel.swift in Sources */,
 				35A0B8812DD3886000BB9EA3 /* AwardView.swift in Sources */,
 				35A0B8822DD3886000BB9EA3 /* ContentView.swift in Sources */,
 				35A0B8832DD3886000BB9EA3 /* DetailView.swift in Sources */,

@@ -8,77 +8,42 @@
 import SwiftUI
 
 struct SidebarView: View {
-    @EnvironmentObject var dataController: DataController
-    let smartFilter: [Filter] = [.all, .recent]
+    @StateObject private var viewModel: ViewModel
 
-    @State private var tagToRename: Tag?
-    @State private var renamingTag = false
-    @State private var tagName = ""
-
-    @State private var showingAward = false
-
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var tags: FetchedResults<Tag>
-
-    var tagFilters: [Filter] {
-        tags.map { tag in
-            Filter(id: tag.tagID, name: tag.tagName, icon: "tag", tag: tag)
-        }
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
-        List(selection: $dataController.selectedFilter) {
+        List(selection: $viewModel.dataController.selectedFilter) {
             Section("Smart Filters") {
-                ForEach(smartFilter) { filter in
+                ForEach(viewModel.smartFilter) { filter in
                     SmartFilterRow(filter: filter)
                 }
             }
 
             Section("Tags") {
-                ForEach(tagFilters) { filter in
-                    UserFilterRow(filter: filter, rename: rename, delete: delete)
-                }.onDelete(perform: delete(_:))
+                ForEach(viewModel.tagFilters) { filter in
+                    UserFilterRow(filter: filter, rename: viewModel.rename, delete: viewModel.delete)
+                }.onDelete(perform: viewModel.delete(_:))
             }
         }
         .toolbar(content: {
-            SidebarViewToolbar(showingAward: $showingAward)
+            SidebarViewToolbar(showingAward: $viewModel.showingAward)
         })
         .navigationTitle("Filters")
-        .alert("Rename tag", isPresented: $renamingTag) {
-            TextField("New name", text: $tagName)
+        .alert("Rename tag", isPresented: $viewModel.renamingTag) {
+            TextField("New name", text: $viewModel.tagName)
             Button("Cancel", role: .cancel) { }
-            Button("OK", action: completeRename)
+            Button("OK", action: viewModel.completeRename)
         }
 
-    }
-
-    func delete(_ offsets: IndexSet) {
-        for offset in offsets {
-            let item = tags[offset]
-            dataController.delete(item)
-        }
-    }
-
-    func rename(_ filter: Filter) {
-        tagToRename = filter.tag
-        tagName = filter.name
-        renamingTag = true
-    }
-
-    func delete(_ filter: Filter) {
-        guard let tag = filter.tag else { return }
-        dataController.delete(tag)
-        dataController.save()
-    }
-
-    func completeRename() {
-        tagToRename?.name = tagName
-        dataController.save()
     }
 }
 
 #Preview {
     NavigationView {
-        SidebarView()
-            .environmentObject(DataController.preview)
+        SidebarView(dataController: DataController.preview)
     }
 }
