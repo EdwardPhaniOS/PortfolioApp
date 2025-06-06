@@ -9,24 +9,30 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @EnvironmentObject var dataController: DataController
 
-    var filterSymbolVariant: SymbolVariants {
-        dataController.filterEnable ? .fill : .none
+    @StateObject var viewModel: ViewModel
+
+    init(dataController: DataController) {
+        let viewModel = ViewModel(dataController: dataController)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
-        List(selection: $dataController.selectedIssue, content: {
-            ForEach(dataController.issuesForSelectedFilter()) { issue in
+        List(
+selection: $viewModel.selectedIssue,
+content: {
+    ForEach(
+        viewModel.dataController.issuesForSelectedFilter()
+    ) { issue in
                 IssueRow(issue: issue)
             }
-            .onDelete(perform: delete)
+            .onDelete(perform: viewModel.delete)
         })
         .navigationTitle("Issues")
         .searchable(
-            text: $dataController.filterText,
-            tokens: $dataController.filterTokens,
-            suggestedTokens: .constant(dataController.suggestedFilterTokens),
+            text: $viewModel.filterText,
+            tokens: $viewModel.filterTokens,
+            suggestedTokens: .constant(viewModel.suggestedFilterTokens),
             prompt: "Filter issue, or type # to add tags") { tag in
                 Text(tag.tagName)
             }
@@ -34,29 +40,23 @@ struct ContentView: View {
                 Menu {
                     ContentViewToolbar()
                 } label: {
-                    Label("Filter", systemImage: "line.3.horizontal.decrease.circle").symbolVariant(filterSymbolVariant)
+                    Label(
+                        "Filter",
+                        systemImage: "line.3.horizontal.decrease.circle"
+                    )
+                    .symbolVariant(viewModel.filterSymbolVariant)
                 }
 
-                Button(action: dataController.newIssue, label: {
+                Button(action: viewModel.dataController.newIssue, label: {
                     Label("New Issue", systemImage: "square.and.pencil")
                         .accessibilityIdentifier("New Issue")
                 })
             }
     }
-
-    func delete(_ offsets: IndexSet) {
-        let issues = dataController.issuesForSelectedFilter()
-
-        for offset in offsets {
-            let item = issues[offset]
-            dataController.delete(item)
-        }
-    }
 }
 
 #Preview {
     NavigationView {
-        ContentView()
-            .environmentObject(DataController.preview)
+        ContentView(dataController: DataController.preview)
     }
 }
