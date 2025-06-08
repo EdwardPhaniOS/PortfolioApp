@@ -32,18 +32,18 @@ extension Issue {
     }
 
     var issueTagList: String {
-        guard let tags = tags else { return "No tags" }
+        guard let tags = tags else { return NSLocalizedString("No tags", comment: "") }
 
-        if tags.count == 0 { return "No tags"}
+        if tags.count == 0 { return NSLocalizedString("No tags", comment: "")}
 
         return issueTags.map { $0.tagName }.formatted()
     }
 
     var issueStatus: String {
         if completed {
-            return "Closed"
+            return NSLocalizedString("Closed", comment: "This issue has been resolved by the user")
         } else {
-            return "Open"
+            return NSLocalizedString("Open", comment: "This issue is currently unresolved")
         }
     }
 

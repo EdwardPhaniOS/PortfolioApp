@@ -607,6 +607,16 @@
         }
       }
     },
+    "No tags" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có thẻ"
+          }
+        }
+      }
+    },
     "OK" : {
       "localizations" : {
         "en" : {
