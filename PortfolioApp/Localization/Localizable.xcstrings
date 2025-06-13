@@ -236,6 +236,7 @@
       }
     },
     "Closed" : {
+      "comment" : "This issue has been resolved by the user",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -650,6 +651,7 @@
       }
     },
     "Open" : {
+      "comment" : "This issue is currently unresolved",
       "localizations" : {
         "en" : {
           "stringUnit" : {
