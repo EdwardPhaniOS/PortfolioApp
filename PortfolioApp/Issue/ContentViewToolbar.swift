@@ -11,8 +11,10 @@ struct ContentViewToolbar: View {
     @EnvironmentObject var dataController: DataController
 
     var body: some View {
-        Button(dataController.filterEnable ? "Turn Filter Off" : "Turn Filter On") {
-            dataController.filterEnable.toggle()
+        Button(
+            dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On"
+        ) {
+            dataController.filterEnabled.toggle()
         }
         Menu("Sort By") {
             Picker("Sort By", selection: $dataController.sortType) {
@@ -34,7 +36,7 @@ struct ContentViewToolbar: View {
             Text("Open").tag(Status.open)
             Text("Closed").tag(Status.closed)
         }
-        .disabled(dataController.filterEnable == false)
+        .disabled(dataController.filterEnabled == false)
 
         Picker("Priority", selection: $dataController.filterPriority) {
             Text("All").tag(-1)
@@ -42,7 +44,7 @@ struct ContentViewToolbar: View {
             Text("Medium").tag(1)
             Text("High").tag(2)
         }
-        .disabled(dataController.filterEnable == false)
+        .disabled(dataController.filterEnabled == false)
     }
 }
 

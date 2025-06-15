@@ -15,7 +15,7 @@ extension ContentView {
         @Published var dataController: DataController
 
         var filterSymbolVariant: SymbolVariants {
-            dataController.filterEnable ? .fill : .none
+            dataController.filterEnabled ? .fill : .none
         }
 
         init(dataController: DataController) {

@@ -37,10 +37,10 @@ struct TagsMenuView: View {
                 }
             }
         } label: {
-            Text(issue.issueTagList)
+            Text(issue.issueTagsList)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .animation(nil, value: issue.issueTagList)
+                .animation(nil, value: issue.issueTagsList)
         }
     }
 }

@@ -526,6 +526,9 @@
         }
       }
     },
+    "New issue" : {
+      "comment" : "Create a new issue"
+    },
     "New Issue" : {
       "comment" : "Create a new issue",
       "localizations" : {
@@ -609,6 +612,7 @@
       }
     },
     "No tags" : {
+      "comment" : "The user has not created any tags yet.",
       "localizations" : {
         "vi" : {
           "stringUnit" : {

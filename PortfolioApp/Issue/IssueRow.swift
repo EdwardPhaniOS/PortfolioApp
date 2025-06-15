@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct IssueRow: View {
+    @EnvironmentObject var dataController: DataController
     @StateObject var viewModel: ViewModel
-
-    init(issue: Issue) {
-        let viewModel = ViewModel(issue: issue)
-        _viewModel = StateObject(wrappedValue: viewModel)
-    }
 
     var body: some View {
         NavigationLink(value: viewModel.issue) {
@@ -21,15 +17,14 @@ struct IssueRow: View {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
                     .opacity(viewModel.iconOpacity)
-                    .accessibilityIdentifier(viewModel.iconIdentifier
-                    )
+                    .accessibilityIdentifier(viewModel.iconIdentifier)
 
                 VStack(alignment: .leading) {
                     Text(viewModel.issueTitle)
                         .font(.headline)
                         .lineLimit(1)
 
-                    Text(viewModel.issueTagList)
+                    Text(viewModel.issueTagsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
@@ -51,6 +46,11 @@ struct IssueRow: View {
         }
         .accessibilityHint(viewModel.accessibilityHint)
         .accessibilityIdentifier(viewModel.issueTitle)
+    }
+
+    init(issue: Issue) {
+        let viewModel = ViewModel(issue: issue)
+        _viewModel = StateObject(wrappedValue: viewModel)
     }
 }
 

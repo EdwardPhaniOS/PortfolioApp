@@ -31,12 +31,15 @@ extension Issue {
         return result.sorted()
     }
 
-    var issueTagList: String {
-        guard let tags = tags else { return NSLocalizedString("No tags", comment: "") }
+    var issueTagsList: String {
+        let noTags = NSLocalizedString("No tags", comment: "The user has not created any tags yet.")
+        guard let tags else { return noTags }
 
-        if tags.count == 0 { return NSLocalizedString("No tags", comment: "")}
-
-        return issueTags.map { $0.tagName }.formatted()
+        if tags.count == 0 {
+            return noTags
+        } else {
+            return issueTags.map(\.tagName).formatted()
+        }
     }
 
     var issueStatus: String {

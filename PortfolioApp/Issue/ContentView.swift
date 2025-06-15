@@ -58,5 +58,6 @@ content: {
 #Preview {
     NavigationView {
         ContentView(dataController: DataController.preview)
+            .environmentObject(DataController.preview)
     }
 }
