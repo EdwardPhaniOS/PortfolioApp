@@ -26,14 +26,14 @@ class TagTests: BaseTestCase {
 
         XCTAssertEqual(
             count,
-            dataController.count(request: Tag.fetchRequest()),
-            "Expected \(count) tags, found \(dataController.count(request: Tag.fetchRequest()))"
+            dataController.count(for: Tag.fetchRequest()),
+            "Expected \(count) tags, found \(dataController.count(for: Tag.fetchRequest()))"
         )
 
         XCTAssertEqual(
             issueCount,
-            dataController.count(request: Issue.fetchRequest()),
-            "Expected \(issueCount) issues, found \(dataController.count(request: Issue.fetchRequest()))"
+            dataController.count(for: Issue.fetchRequest()),
+            "Expected \(issueCount) issues, found \(dataController.count(for: Issue.fetchRequest()))"
         )
     }
 
@@ -43,8 +43,8 @@ class TagTests: BaseTestCase {
         let tags = try managedObjectContext.fetch(Tag.fetchRequest())
         dataController.delete(tags[0])
 
-        XCTAssertEqual(4, dataController.count(request: Tag.fetchRequest()), "Expected 4 tags after deleting 1 tag")
-        XCTAssertEqual(50, dataController.count(request: Issue.fetchRequest()), "Expected 50 issues after deleting a tag")
+      XCTAssertEqual(4, dataController.count(for: Tag.fetchRequest()), "Expected 4 tags after deleting 1 tag")
+      XCTAssertEqual(50, dataController.count(for: Issue.fetchRequest()), "Expected 50 issues after deleting a tag")
     }
 
 

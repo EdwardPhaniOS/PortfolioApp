@@ -7,4 +7,5 @@ excluded:
   - Pods
 disabled_rules:
 - operator_whitespace
+- force_cast
 

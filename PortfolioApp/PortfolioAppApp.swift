@@ -11,33 +11,47 @@ import CoreSpotlight
 @main
 struct PortfolioAppApp: App {
 
-    @StateObject var dataController = DataController()
-    @Environment(\.scenePhase) var scenePhase
+  @Environment(\.scenePhase) var scenePhase
 
-    var body: some Scene {
-        WindowGroup {
-            NavigationSplitView {
-                SidebarView(dataController: dataController)
-            } content: {
-                ContentView(dataController: dataController)
-            } detail: {
-                DetailView()
-            }
-            .environment(\.managedObjectContext, dataController.container.viewContext)
-            .environmentObject(dataController)
-            .onChange(of: scenePhase) { _, newValue in
-                if newValue != .active {
-                    dataController.save()
-                }
-            }
-            .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
-        }
+  var diContainer: DIContainer = {
+    let container = DIContainer.shared
+
+    container.register(type: CoreDataStack.self, lifeTime: .singleton) { _ in
+      CoreDataStack()
     }
 
-    func loadSpotlightItem(_ userActivity: NSUserActivity) {
-        if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
-            dataController.selectedIssue = dataController.issue(with: uniqueIdentifier)
-            dataController.selectedFilter = .all
-        }
+    container.register(type: PersistenceService.self, lifeTime: .singleton) { resolver in
+      let coreDataStack = resolver.resolve(type: CoreDataStack.self)
+      return PersistenceService(coreDataStack: coreDataStack)
     }
+
+    return container
+  }()
+
+  var body: some Scene {
+    WindowGroup {
+      NavigationSplitView {
+        SidebarView()
+      } content: {
+        ContentView()
+      } detail: {
+        DetailView()
+      }
+      .onChange(of: scenePhase) { _, newValue in
+        if newValue != .active {
+          let persistenceService: PersistenceService = Inject().wrappedValue
+          persistenceService.save()
+        }
+      }
+      .onContinueUserActivity(CSSearchableItemActionType, perform: loadSpotlightItem)
+    }
+  }
+
+  func loadSpotlightItem(_ userActivity: NSUserActivity) {
+    if let uniqueIdentifier = userActivity.userInfo?[CSSearchableItemActivityIdentifier] as? String {
+      let persistenceService = diContainer.resolve(type: PersistenceService.self)
+      persistenceService.selectedIssue = persistenceService.issue(with: uniqueIdentifier)
+      persistenceService.selectedFilter = .all
+    }
+  }
 }

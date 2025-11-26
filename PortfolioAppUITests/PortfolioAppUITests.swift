@@ -84,7 +84,7 @@ final class PortfolioAppUITests: XCTestCase {
             }
 
             award.tap()
-            XCTAssertTrue(app.alerts["Locked"].exists, "Expected a locked alert for each award")
+                      XCTAssertTrue(app.alerts["Locked"].exists, "Expected a locked alert for each award")
             app.buttons["OK"].tap()
         }
     }

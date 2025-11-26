@@ -10,12 +10,12 @@ import XCTest
 @testable import PortfolioApp
 
 class BaseTestCase: XCTestCase {
-    var dataController: DataController!
+    var persistenceService: PersistenceService!
     var managedObjectContext: NSManagedObjectContext!
     let awards = Award.allAwards
 
     override func setUpWithError() throws {
-        dataController = DataController(inMemory: true)
-        managedObjectContext = dataController.container.viewContext
+      persistenceService = PersistenceService.mock
+      managedObjectContext = persistenceService.coreDataStack.viewContext
     }
 }

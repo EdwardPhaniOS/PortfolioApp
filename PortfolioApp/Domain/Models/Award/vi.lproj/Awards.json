@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Bước Đầu Tiên",
+        "description": "Thêm vấn đề đầu tiên của bạn.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 1,
+        "image": "figure.walk"
+    },
+    {
+        "name": "Khởi Đầu Tuyệt Vời",
+        "description": "Thêm 10 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 10,
+        "image": "hand.thumbsup.fill"
+    },
+    {
+        "name": "Tiến Lên",
+        "description": "Thêm 20 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 20,
+        "image": "tray.and.arrow.up.fill"
+    },
+    {
+        "name": "Tăng Tốc",
+        "description": "Thêm 50 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 50,
+        "image": "speedometer"
+    },
+    {
+        "name": "Tạo Sóng",
+        "description": "Thêm 100 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 100,
+        "image": "dot.radiowaves.left.and.right"
+    },
+    {
+        "name": "Người Xuất Sắc",
+        "description": "Thêm 250 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 250,
+        "image": "square.stack.3d.up.fill"
+    },
+    {
+        "name": "Ngôi Sao Xuất Sắc",
+        "description": "Thêm 500 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 500,
+        "image": "star.circle.fill"
+    },
+    {
+        "name": "Nhà Vô Địch",
+        "description": "Thêm 1000 vấn đề.",
+        "color": "Light Blue",
+        "criterion": "issues",
+        "value": 1000,
+        "image": "crown.fill"
+    },
+    {
+        "name": "Đánh Dấu Hộp",
+        "description": "Đóng vấn đề đầu tiên của bạn.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 1,
+        "image": "checkmark.shield.fill"
+    },
+    {
+        "name": "Thật Tuyệt",
+        "description": "Đóng 10 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 10,
+        "image": "guitars.fill"
+    },
+    {
+        "name": "20 Là Đủ",
+        "description": "Đóng 20 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 20,
+        "image": "20.square.fill"
+    },
+    {
+        "name": "Trúng Đích!",
+        "description": "Đóng 50 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 50,
+        "image": "target"
+    },
+    {
+        "name": "Bay Cao",
+        "description": "Đóng 100 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 100,
+        "image": "airplane.circle.fill"
+    },
+    {
+        "name": "Bốc Cháy!",
+        "description": "Đóng 250 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 250,
+        "image": "flame.fill"
+    },
+    {
+        "name": "Người Đánh Dấu Hàng Đầu",
+        "description": "Đóng 500 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 500,
+        "image": "text.badge.checkmark"
+    },
+    {
+        "name": "Bùm!",
+        "description": "Đóng 1000 vấn đề.",
+        "color": "Green",
+        "criterion": "closed",
+        "value": 1000,
+        "image": "bolt.circle.fill"
+    },
+    {
+        "name": "Chơi Thẻ",
+        "description": "Bạn đã tạo thẻ đầu tiên của mình.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 1,
+        "image": "tag.fill"
+    },
+    {
+        "name": "Đấu Vật Thẻ",
+        "description": "Bạn đã tạo 10 thẻ.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 10,
+        "image": "tag.circle.fill"
+    },
+    {
+        "name": "Người Gắn Thẻ Tối Cao",
+        "description": "Bạn đã tạo 50 thẻ.",
+        "color": "Gold",
+        "criterion": "tags",
+        "value": 50,
+        "image": "square.grid.3x1.folder.fill.badge.plus"
+    },
+    {
+        "name": "Người Hỗ Trợ",
+        "description": "Bạn đã mua gói mở khóa cao cấp.",
+        "color": "Purple",
+        "criterion": "unlock",
+        "value": 0,
+        "image": "dollarsign.square.fill"
+    }
+]
