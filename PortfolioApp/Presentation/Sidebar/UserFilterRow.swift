@@ -9,16 +9,16 @@ import SwiftUI
 
 struct UserFilterRow: View {
   var filter: Filter
-  
+
   var rename: (Filter) -> Void
   var delete: (Filter) -> Void
-  
+
   init(filter: Filter, rename: @escaping (Filter) -> Void, delete: @escaping (Filter) -> Void) {
     self.filter = filter
     self.rename = rename
     self.delete = delete
   }
-  
+
   var body: some View {
     NavigationLink(value: filter) {
       Label(filter.name, systemImage: filter.icon)
@@ -29,7 +29,7 @@ struct UserFilterRow: View {
           } label: {
             Label("Rename", systemImage: "pencil")
           }
-          
+
           Button(role: .destructive) {
             delete(filter)
           } label: {

@@ -56,8 +56,8 @@ extension Issue {
   }
 
   static var example: Issue {
-    let persistenceService = PersistenceService.mock
-    let viewContext = persistenceService.coreDataStack.viewContext
+    let issueService = IssueService.mock
+    let viewContext = issueService.coreDataStack.viewContext
 
     let issue = Issue(context: viewContext)
     issue.title = "Example Issue"

@@ -8,7 +8,7 @@
 import Foundation
 import UserNotifications
 
-extension PersistenceService {
+extension BaseService {
     func addReminder(for issue: Issue) async -> Bool {
         do {
             let center = UNUserNotificationCenter.current()

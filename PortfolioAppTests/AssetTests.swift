@@ -11,8 +11,24 @@ import XCTest
 final class AssetTests: XCTestCase {
 
     func testColorsExist() {
-        let allColors = ["Dark Blue", "Dark Gray", "Gold", "Gray", "Green",
-                         "Light Blue", "Midnight", "Orange", "Pink", "Purple", "Red", "Teal"]
+        let allColors = ["AccentColor",
+                         "AccentContrastTextColor",
+                         "AlternateAccentColor",
+                         "AlternateTextColor",
+                         "CellBackgroundColor",
+                         "DestructiveColor",
+                         "DividerColor",
+                         "ErrorColor",
+                         "InfoColor",
+                         "InProgressColor",
+                         "MiscellaneousColor",
+                         "NeutralActionColor",
+                         "PrimaryActionColor",
+                         "SecondaryTextColor",
+                         "SuccessColor",
+                         "TextColor",
+                         "ViewBackgroundColor",
+                         "WarningColor"]
 
         for color in allColors {
             XCTAssertNotNil(UIColor(named: color), "Failed to load color '\(color)' from asset catalog")

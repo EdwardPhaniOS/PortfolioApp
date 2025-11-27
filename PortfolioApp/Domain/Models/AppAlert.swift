@@ -11,11 +11,13 @@ struct AppAlert {
   let title: String
   let message: String
   let actionButton: ActionButton?
+  let textFieldConfig: TextFieldConfig?
 
-  init(title: String, message: String, actionButton: ActionButton? = nil) {
+  init(title: String, message: String, actionButton: ActionButton? = nil, textFieldConfig: TextFieldConfig? = nil) {
     self.title = title
     self.message = message
     self.actionButton = actionButton
+    self.textFieldConfig = textFieldConfig
   }
 }
 
@@ -23,6 +25,12 @@ extension AppAlert {
   struct ActionButton {
     let title: String
     let action: () -> Void
+  }
+
+  struct TextFieldConfig {
+    let text: String
+    var placeholder: String = "Enter"
+    let completion: (String) -> Void
   }
 }
 
@@ -38,5 +46,11 @@ extension AppAlert {
     title: "Sign Out",
     message: "Are you sure you want to sign out?",
     actionButton: .init(title: "Sign Out", action: { })
+  )
+
+  static var mock3: Self = .init(
+    title: "Title",
+    message: "Description",
+    textFieldConfig: .init(text: "", completion: { _ in })
   )
 }

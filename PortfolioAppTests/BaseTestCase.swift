@@ -1,21 +1,21 @@
+////
+////  PortfolioAppTests.swift
+////  PortfolioAppTests
+////
+////  Created by Vinh Phan on 14/5/25.
+////
 //
-//  PortfolioAppTests.swift
-//  PortfolioAppTests
+//import CoreData
+//import XCTest
+//@testable import PortfolioApp
 //
-//  Created by Vinh Phan on 14/5/25.
+//class BaseTestCase: XCTestCase {
+//    var persistenceService: BaseService!
+//    var managedObjectContext: NSManagedObjectContext!
+//    let awards = Award.allAwards
 //
-
-import CoreData
-import XCTest
-@testable import PortfolioApp
-
-class BaseTestCase: XCTestCase {
-    var persistenceService: PersistenceService!
-    var managedObjectContext: NSManagedObjectContext!
-    let awards = Award.allAwards
-
-    override func setUpWithError() throws {
-      persistenceService = PersistenceService.mock
-      managedObjectContext = persistenceService.coreDataStack.viewContext
-    }
-}
+//    override func setUpWithError() throws {
+//      persistenceService = BaseService.mock
+//      managedObjectContext = persistenceService.coreDataStack.viewContext
+//    }
+//}

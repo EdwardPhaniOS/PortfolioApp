@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct TagsMenuView: View {
-  var persistenceService: PersistenceService
+  var tagService: TagService
   @ObservedObject var issue: Issue
 
-  init(persistenceService: PersistenceService = Inject().wrappedValue, issue: Issue) {
-    self.persistenceService = persistenceService
+  init(tagService: TagService = Inject().wrappedValue, issue: Issue) {
+    self.tagService = tagService
     self.issue = issue
   }
 
@@ -28,7 +28,7 @@ struct TagsMenuView: View {
       }
 
       // Now show unselected tags
-      let otherTags = persistenceService.missingTags(from: issue)
+      let otherTags = tagService.missingTags(from: issue)
 
       if otherTags.isEmpty == false {
         Divider()
@@ -51,5 +51,5 @@ struct TagsMenuView: View {
 }
 
 #Preview {
-  TagsMenuView(persistenceService: .mock, issue: .example)
+  TagsMenuView(tagService: .mock, issue: .example)
 }

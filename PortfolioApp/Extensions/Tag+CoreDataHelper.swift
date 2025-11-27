@@ -23,8 +23,8 @@ extension Tag {
   }
 
   static var example: Tag {
-    let persistenceService = PersistenceService.mock
-    let viewContext = persistenceService.coreDataStack.viewContext
+    let tagService = TagService.mock
+    let viewContext = tagService.coreDataStack.viewContext
 
     let tag = Tag(context: viewContext)
     tag.name = "Example Tag"

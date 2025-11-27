@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "**Modified:** %@" : {
       "localizations" : {
         "en" : {
@@ -95,6 +98,9 @@
         }
       }
     },
+    "Add New Issue" : {
+
+    },
     "Add Sample" : {
       "localizations" : {
         "en" : {
@@ -112,20 +118,7 @@
       }
     },
     "Add Tag" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add Tag"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Thêm thẻ"
-          }
-        }
-      }
+
     },
     "Add Tags" : {
       "localizations" : {
@@ -225,6 +218,7 @@
       }
     },
     "Check settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "vi" : {
           "stringUnit" : {
@@ -584,6 +578,7 @@
       }
     },
     "New name" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -633,6 +628,7 @@
       }
     },
     "No Issue Selected" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -853,6 +849,7 @@
       }
     },
     "Rename tag" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -864,6 +861,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đổi tên thẻ"
+          }
+        }
+      }
+    },
+    "Search Tasks" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm kiếm tác vụ"
           }
         }
       }

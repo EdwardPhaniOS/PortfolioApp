@@ -8,7 +8,7 @@
 import Foundation
 import StoreKit
 
-extension PersistenceService {
+extension BaseService {
 
     static let unlockPremiumProductId = "VinhPhan.PortfolioApp.premiumUnlock"
 

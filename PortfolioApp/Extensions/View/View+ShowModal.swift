@@ -43,7 +43,7 @@ struct ModalSupport<ModalContent: View>: ViewModifier {
         modalContent()
       }
     }
-    .animation(.easeInOut, value: isPresenting)
+    .animation(.spring, value: isPresenting)
   }
 }
 

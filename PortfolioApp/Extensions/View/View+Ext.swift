@@ -30,10 +30,10 @@ extension View {
       .shadow(.regular)
   }
 
-  func plainButton() -> some View {
+  func plainButton(tintColor: Color = Color.appTheme.text) -> some View {
     self
       .font(.headline)
-      .foregroundStyle(Color.appTheme.text)
+      .foregroundStyle(tintColor)
       .frame(maxWidth: .infinity)
       .padding()
   }
