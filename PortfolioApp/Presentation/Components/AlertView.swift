@@ -47,14 +47,14 @@ private extension AlertView {
 
 private extension AlertView {
   var headingView: some View {
-    Text(LocalizedStringKey(appAlert.title))
+    Text(appAlert.title.localizedStringKey)
       .font(.title3)
       .fontWeight(.semibold)
       .foregroundStyle(Color.appTheme.text)
   }
 
   var messageView: some View {
-    Text(LocalizedStringKey(appAlert.message))
+    Text(appAlert.message.localizedStringKey)
       .foregroundStyle(Color.appTheme.secondaryText)
       .multilineTextAlignment(.center)
   }
@@ -63,7 +63,7 @@ private extension AlertView {
     HStack(spacing: 5) {
       if let actionButton = appAlert.actionButton {
         cancelButtonView
-        Text(LocalizedStringKey(actionButton.title))
+        Text(actionButton.title.localizedStringKey)
           .primaryButton()
           .button(.press) {
             actionButton.action()
@@ -71,7 +71,7 @@ private extension AlertView {
           }
       } else if let textFieldConfig = appAlert.textFieldConfig {
         cancelButtonView
-        Text(LocalizedStringKey("OK"))
+        Text("OK".localizedStringKey)
           .primaryButton()
           .button(.press) {
             textFieldConfig.completion(inputText)
@@ -84,7 +84,7 @@ private extension AlertView {
   }
 
   var okButtonView: some View {
-    Text(LocalizedStringKey("OK"))
+    Text("OK".localizedStringKey)
       .primaryButton()
       .button(.press) {
         dismiss()

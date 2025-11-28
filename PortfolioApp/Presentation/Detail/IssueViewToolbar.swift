@@ -34,7 +34,7 @@ struct IssueViewToolbar: View {
       Button {
         toggleCompleted()
       } label: {
-        Label(openCloseButtonText, systemImage: "bubble.left.and.exclamationmark.bubble.right")
+        Label(openCloseButtonText.localizedStringKey, systemImage: "bubble.left.and.exclamationmark.bubble.right")
       }
       .sensoryFeedback(trigger: issue.completed) { _, newValue in
         return newValue ? .success : .none

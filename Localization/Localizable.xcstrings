@@ -98,8 +98,22 @@
         }
       }
     },
-    "Add New Issue" : {
-
+    "Add New" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add New"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm mới"
+          }
+        }
+      }
     },
     "Add Sample" : {
       "localizations" : {
@@ -217,17 +231,6 @@
         }
       }
     },
-    "Check settings" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check settings"
-          }
-        }
-      }
-    },
     "Check Settings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -241,6 +244,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Check Settings"
+          }
+        }
+      }
+    },
+    "Close Issue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close Issue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng vấn đề"
           }
         }
       }
@@ -412,23 +432,6 @@
         }
       }
     },
-    "Filter issue, or type # to add tags" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter issue, or type # to add tags"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lọc vấn đề hoặc nhấp # đê thêm thẻ"
-          }
-        }
-      }
-    },
     "Filters" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -573,23 +576,6 @@
           "stringUnit" : {
             "state" : "needs_review",
             "value" : "Các vấn đề gần đây"
-          }
-        }
-      }
-    },
-    "New name" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New name"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tên mới"
           }
         }
       }
@@ -790,10 +776,16 @@
     },
     "Reminder" : {
       "localizations" : {
-        "vi" : {
+        "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reminder"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhắc nhở"
           }
         }
       }

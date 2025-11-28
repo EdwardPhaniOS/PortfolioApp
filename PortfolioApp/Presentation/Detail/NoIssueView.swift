@@ -22,8 +22,9 @@ struct NoIssueView: View {
         .font(.title)
         .foregroundStyle(.secondary)
 
-      Text("Add New Issue")
+      Text("Add New")
         .primaryButton()
+        .frame(width: 120)
         .button(.press) {
           issueService.newIssue(filterState: filterState)
         }

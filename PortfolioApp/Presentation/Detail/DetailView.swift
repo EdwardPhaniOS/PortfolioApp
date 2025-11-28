@@ -14,6 +14,8 @@ struct DetailView: View {
     VStack {
       if let issue = filterState.selectedIssue {
         IssueView(issue: issue)
+      } else {
+        NoIssueView()
       }
     }
     .infinityFrame()

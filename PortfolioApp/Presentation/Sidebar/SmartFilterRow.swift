@@ -13,7 +13,7 @@ struct SmartFilterRow: View {
 
     var body: some View {
         NavigationLink(value: filter) {
-            Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
+          Label(filter.name.localizedStringKey, systemImage: filter.icon)
         }
     }
 }

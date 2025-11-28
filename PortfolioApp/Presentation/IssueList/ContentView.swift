@@ -9,9 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-
-  @StateObject var viewModel: ContentViewVM
   @EnvironmentObject var filterState: FilterState
+  @StateObject var viewModel: ContentViewVM
 
   init() {
     let viewModel = ContentViewVM()
@@ -21,18 +20,8 @@ struct ContentView: View {
   var body: some View {
     VStack {
       searchBarView
-      ZStack {
-        issueListView
-        NoIssueView()
-          .opacity(viewModel.issues.isEmpty ? 1 : 0)
-      }
+      issueListView
     }
-    .task {
-      viewModel.fetchIssue(filterState: filterState)
-    }
-    .onChange(of: filterState.filterText, { _, _ in
-      viewModel.fetchIssue(filterState: filterState)
-    })
     .infinityFrame()
     .navigationTitle("Issues")
     .toolbar { toolbarContentView }
@@ -60,10 +49,12 @@ private extension ContentView {
     List(
       selection: $filterState.selectedIssue,
       content: {
-        ForEach(viewModel.issues) { issue in
+        ForEach(viewModel.issuesForSelectedFilter(filterState: filterState)) { issue in
           IssueRow(issue: issue)
         }
-        .onDelete(perform: viewModel.delete)
+        .onDelete { indexSet in
+          viewModel.delete(indexSet, filterState: filterState)
+        }
       })
     .listStyle(.inset)
   }
@@ -81,7 +72,7 @@ private extension ContentView {
     }
 
     Button {
-      viewModel.addNewIssue()
+      viewModel.addNewIssue(filterState: filterState)
     } label: {
       Label("New Issue", systemImage: "square.and.pencil")
         .accessibilityIdentifier("New Issue")

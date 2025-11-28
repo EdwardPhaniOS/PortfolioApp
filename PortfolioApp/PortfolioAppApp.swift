@@ -13,6 +13,7 @@ struct PortfolioAppApp: App {
 
   @Environment(\.scenePhase) var scenePhase
   @StateObject var filterState: FilterState = FilterState()
+  @State private var columnVisibility: NavigationSplitViewVisibility = .all
 
   var diContainer: DIContainer = {
     let container = DIContainer.shared
@@ -40,7 +41,7 @@ struct PortfolioAppApp: App {
 
   var body: some Scene {
     WindowGroup {
-      NavigationSplitView {
+      NavigationSplitView(columnVisibility: $columnVisibility) {
         SidebarView()
       } content: {
         ContentView()
@@ -48,6 +49,18 @@ struct PortfolioAppApp: App {
         DetailView()
       }
       .environmentObject(filterState)
+      .onChange(of: filterState.selectedIssue, { _, newValue in
+        if newValue != nil {
+          columnVisibility = .detailOnly
+        } else {
+          columnVisibility = .all
+        }
+      })
+      .onChange(of: filterState.selectedFilter, { _, newValue in
+        if newValue != nil {
+          filterState.selectedIssue = nil
+        }
+      })
       .onChange(of: scenePhase) { _, newValue in
         if newValue != .active {
           let baseService: BaseService = Inject().wrappedValue

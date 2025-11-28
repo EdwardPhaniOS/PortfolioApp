@@ -20,4 +20,3 @@ class FilterState: ObservableObject {
   @Published var sortType = SortType.createdDate
   @Published var sortNewestFirst = true
 }
-
