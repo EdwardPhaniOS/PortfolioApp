@@ -116,6 +116,7 @@
       }
     },
     "Add Sample" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -131,7 +132,10 @@
         }
       }
     },
-    "Add Tag" : {
+    "ADD SAMPLES" : {
+
+    },
+    "Add tag" : {
 
     },
     "Add Tags" : {
@@ -215,6 +219,9 @@
         }
       }
     },
+    "Buy Now" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "en" : {
@@ -266,7 +273,7 @@
       }
     },
     "Closed" : {
-      "comment" : "This issue has been resolved by the user",
+      "comment" : "This issue has been resolved by the user.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -318,6 +325,7 @@
       }
     },
     "Created date" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -332,6 +340,12 @@
           }
         }
       }
+    },
+    "Date Created" : {
+
+    },
+    "Date Modified" : {
+
     },
     "Delete" : {
       "localizations" : {
@@ -428,6 +442,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lọc"
+          }
+        }
+      }
+    },
+    "Filter issues" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lọc các vấn đề"
           }
         }
       }
@@ -580,6 +604,9 @@
         }
       }
     },
+    "New name" : {
+
+    },
     "New tag" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -614,7 +641,6 @@
       }
     },
     "No Issue Selected" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -708,7 +734,7 @@
       }
     },
     "Open" : {
-      "comment" : "This issue is currently unresolved",
+      "comment" : "This issue is currently unresolved.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -741,7 +767,6 @@
       }
     },
     "Re-open Issue" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -775,6 +800,7 @@
       }
     },
     "Reminder" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -841,7 +867,6 @@
       }
     },
     "Rename tag" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -888,9 +913,6 @@
       }
     },
     "Show Error" : {
-
-    },
-    "Show Loading" : {
 
     },
     "Show Modal - isPresenting" : {
@@ -1072,6 +1094,7 @@
       }
     },
     "Unlocked %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "vi" : {
           "stringUnit" : {
@@ -1081,7 +1104,11 @@
         }
       }
     },
+    "Unlocked: %@" : {
+
+    },
     "Updated date" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

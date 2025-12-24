@@ -8,7 +8,7 @@
 import Foundation
 
 extension Bundle {
-  func decode<T: Decodable>(file: String, asType type: T.Type = T.self) -> T {
+  func decode<T: Decodable>(file: String, as type: T.Type = T.self) -> T {
     guard let url = self.url(forResource: file, withExtension: nil) else {
       fatalError("Can not find \(file) in bundle")
     }
