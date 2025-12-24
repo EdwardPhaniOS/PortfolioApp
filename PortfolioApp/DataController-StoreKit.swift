@@ -10,7 +10,7 @@ import StoreKit
 
 extension DataController {
     /// The product ID for our premium unlock.
-    static let unlockPremiumProductID = "com.hackingwithswift.UltimatePortfolio.premiumUnlock"
+    static let unlockPremiumProductID = "VinhPhan.PortfolioApp.premiumUnlock"
 
     /// Loads and saves whether our premium unlock has been purchased.
     var fullVersionUnlocked: Bool {
