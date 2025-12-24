@@ -24,13 +24,6 @@ A SwiftUI-based issue tracking application that helps you manage tasks and proje
 2. Open the project in Xcode 14.0 or later
 3. Build and run on your device or simulator
 
-## Project Structure
-
-- **DataController**: Manages CoreData operations and filtering logic
-- **ContentView**: Main UI for displaying and interacting with issues
-- **Filter**: Defines filtering options for issues
-- **Issue & Tag Models**: CoreData models for storing issue and tag data
-
 ## License
 
 MIT License
