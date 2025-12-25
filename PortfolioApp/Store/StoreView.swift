@@ -9,54 +9,165 @@ import StoreKit
 import SwiftUI
 
 struct StoreView: View {
-    @EnvironmentObject var dataController: DataController
-    @Environment(\.dismiss) var dismiss
-    @State private var products = [Product]()
+  enum LoadState {
+    case loading, loaded, error
+  }
 
-    var body: some View {
-        NavigationStack {
-            if let product = products.first {
-                VStack(alignment: .leading) {
-                    Text(product.displayName)
-                        .font(.title)
+  @EnvironmentObject var dataController: DataController
+  @Environment(\.dismiss) var dismiss
+  @State private var loadState: LoadState = .loading
+  @State private var appAlert: AppAlert?
 
-                    Text(product.description)
+  var body: some View {
+    NavigationStack {
+      VStack {
+        headerView
+        productsView
+        footerView
+      }
+    }
+    .onChange(of: dataController.fullVersionUnlocked, { _, _ in
+      checkForPurchase()
+    })
+    .task {
+      await load()
+    }
+    .showAlert(item: $appAlert)
+  }
+}
 
-                    Button("Buy Now") {
-                        purchase(product)
-                    }
-                }
-            }
+extension StoreView {
+
+  var headerView: some View {
+    VStack {
+      Image(decorative: "unlock")
+        .resizable()
+        .scaledToFit()
+      Text("Upgrade Today!")
+        .font(.title.bold())
+        .fontDesign(.rounded)
+        .foregroundStyle(Color.appTheme.accentContrastText)
+      Text("Get the most out of the app")
+          .font(.headline)
+          .foregroundStyle(Color.appTheme.accentContrastText)
+    }
+    .infinityFrame()
+    .padding(20)
+    .background(Color.appTheme.accent.gradient)
+  }
+
+  var productsView: some View {
+    ScrollView {
+      VStack {
+        switch loadState {
+        case .loading:
+          loadingView
+        case .loaded:
+          ForEach(dataController.products) { product in
+            createProductView(product: product)
+          }
+        case .error:
+          Text("Sorry, there was an error loading our store.")
+            .padding(.top, 50)
         }
-        .onChange(of: dataController.fullVersionUnlocked) { _ in
-            checkForPurchase()
+      }
+    }
+  }
+  
+  var loadingView: some View {
+    VStack {
+      Text("Loading...")
+        .font(.title2.bold())
+        .padding(.top, 50)
+      ProgressView()
+    }
+  }
+
+  func createProductView(product: Product) -> some View {
+    HStack {
+      VStack(alignment: .leading) {
+        Text(product.displayName)
+          .font(.title)
+        Text(product.description)
+      }
+
+      Spacer()
+      
+      Text(product.displayPrice)
+        .font(.title)
+        .fontDesign(.rounded)
+    }
+    .primaryButton()
+    .button(.press) {
+      purchase(product)
+    }
+    .padding(.horizontal)
+  }
+
+  var footerView: some View {
+    VStack {
+      Text("Restore Purchases")
+        .secondaryButton()
+        .button(.press) {
+          restore()
         }
-        .task {
-            await load()
+
+      Text("Cancel")
+        .plainButton(tintColor: Color.appTheme.accent)
+        .button {
+          dismiss()
         }
     }
+    .padding(.horizontal)
+  }
+}
 
-    func checkForPurchase() {
-        if dataController.fullVersionUnlocked {
-            dismiss()
-        }
+extension StoreView {
+  func checkForPurchase() {
+    if dataController.fullVersionUnlocked {
+      dismiss()
+    }
+  }
+
+  func purchase(_ product: Product) {
+    guard AppStore.canMakePayments else {
+      appAlert = AppAlert(title: "In-app purchases are disabled", message: """
+    You can't purchase the premium unlock because in-app purchases are disabled on this device.
+    
+    Please ask whomever manages your device for assistance.
+    """)
+      return
     }
 
-    func purchase(_ product: Product) {
-        Task { @MainActor in
-            try await dataController.purchase(product)
-        }
+    Task { @MainActor in
+      try await dataController.purchase(product)
     }
+  }
 
-    func load() async {
-        do {
-            products = try await Product.products(for: [DataController.unlockPremiumProductID])
-        } catch {
-            print("Failed to load products: \(error.localizedDescription)")
-        }
+  func load() async {
+    loadState = .loading
+
+    do {
+      try await dataController.loadProducts()
+
+      if dataController.products.isEmpty {
+        loadState = .error
+      } else {
+        loadState = .loaded
+      }
+    } catch {
+      loadState = .error
     }
+  }
+
+  func restore() {
+    Task {
+      try await AppStore.sync()
+    }
+  }
 }
 
 #Preview {
-    StoreView()
+  StoreView()
+    .environmentObject(DataController(inMemory: true))
 }

@@ -8,4 +8,5 @@ excluded:
 disabled_rules:
 - operator_whitespace
 - force_cast
+- trailing_whitespace
 

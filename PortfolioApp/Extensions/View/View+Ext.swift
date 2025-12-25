@@ -19,6 +19,17 @@ extension View {
       .shadow(.regular)
   }
 
+  func secondaryButton() -> some View {
+    self
+      .font(.headline)
+      .foregroundStyle(Color.appTheme.accentContrastText)
+      .frame(maxWidth: .infinity)
+      .padding()
+      .background(Color.appTheme.alternateAccent)
+      .cornerRadius(.button)
+      .shadow(.regular)
+  }
+
   func destructiveButton() -> some View {
     self
       .font(.headline)
