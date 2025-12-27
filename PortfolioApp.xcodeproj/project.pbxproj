@@ -67,7 +67,7 @@
 		35F41B642EFBC53D00FBA74E /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 35F41B622EFBC53D00FBA74E /* DecodableString.json */; };
 		35F41B652EFBC53D00FBA74E /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 35F41B612EFBC53D00FBA74E /* DecodableDictionary.json */; };
 		35F41B6E2EFBC5DC00FBA74E /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B6D2EFBC5DC00FBA74E /* TagTests.swift */; };
-		35F41B6F2EFBC5DC00FBA74E /* PortfolioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B672EFBC5DC00FBA74E /* PortfolioAppTests.swift */; };
+		35F41B6F2EFBC5DC00FBA74E /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B672EFBC5DC00FBA74E /* BaseTestCase.swift */; };
 		35F41B702EFBC5DC00FBA74E /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B692EFBC5DC00FBA74E /* ExtensionTests.swift */; };
 		35F41B712EFBC5DC00FBA74E /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B6C2EFBC5DC00FBA74E /* DevelopmentTests.swift */; };
 		35F41B722EFBC5DC00FBA74E /* AwardsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B6B2EFBC5DC00FBA74E /* AwardsTest.swift */; };
@@ -158,7 +158,7 @@
 		35F41B5B2EFBBB4C00FBA74E /* DataController-StoreKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataController-StoreKit.swift"; sourceTree = "<group>"; };
 		35F41B612EFBC53D00FBA74E /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
 		35F41B622EFBC53D00FBA74E /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
-		35F41B672EFBC5DC00FBA74E /* PortfolioAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioAppTests.swift; sourceTree = "<group>"; };
+		35F41B672EFBC5DC00FBA74E /* BaseTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
 		35F41B692EFBC5DC00FBA74E /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		35F41B6A2EFBC5DC00FBA74E /* PerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		35F41B6B2EFBC5DC00FBA74E /* AwardsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsTest.swift; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 		35CA35EC2DD4DDBE004AF02F /* PortfolioAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				35F41B672EFBC5DC00FBA74E /* PortfolioAppTests.swift */,
+				35F41B672EFBC5DC00FBA74E /* BaseTestCase.swift */,
 				35F41B692EFBC5DC00FBA74E /* ExtensionTests.swift */,
 				35F41B6A2EFBC5DC00FBA74E /* PerformanceTests.swift */,
 				35F41B6B2EFBC5DC00FBA74E /* AwardsTest.swift */,
@@ -645,7 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35F41B6E2EFBC5DC00FBA74E /* TagTests.swift in Sources */,
-				35F41B6F2EFBC5DC00FBA74E /* PortfolioAppTests.swift in Sources */,
+				35F41B6F2EFBC5DC00FBA74E /* BaseTestCase.swift in Sources */,
 				35F41B702EFBC5DC00FBA74E /* ExtensionTests.swift in Sources */,
 				35F41B712EFBC5DC00FBA74E /* DevelopmentTests.swift in Sources */,
 				35F41B722EFBC5DC00FBA74E /* AwardsTest.swift in Sources */,
@@ -813,6 +813,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
@@ -823,7 +824,7 @@
 				INFOPLIST_FILE = PortfolioApp/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -848,6 +849,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
@@ -858,7 +860,7 @@
 				INFOPLIST_FILE = PortfolioApp/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
