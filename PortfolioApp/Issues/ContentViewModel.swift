@@ -34,5 +34,9 @@ extension ContentView {
         dataController.delete(item)
       }
     }
+    
+    func newIssue() {
+      dataController.newIssue()
+    }
   }
 }

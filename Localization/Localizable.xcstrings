@@ -695,6 +695,12 @@
     "No tags" : {
       "comment" : "The user has not created any tags yet.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tags"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
