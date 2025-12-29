@@ -15,6 +15,15 @@ extension ContentView {
     
     init(dataController: DataController) {
       self.dataController = dataController
+      
+      NotificationCenter.default
+        .addObserver(forName: .addNewIssue, object: nil, queue: .main) { [weak self] _ in
+          self?.newIssue()
+        }
+    }
+    
+    deinit {
+      NotificationCenter.default.removeObserver(self)
     }
     
     subscript<Value>(dynamicMember keyPath: KeyPath<DataController, Value>) -> Value {

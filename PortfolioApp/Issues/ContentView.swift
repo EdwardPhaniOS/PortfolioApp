@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import AppIntents
 
 struct ContentView: View {
   @StateObject var viewModel: ViewModel
