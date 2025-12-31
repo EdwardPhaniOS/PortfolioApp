@@ -89,6 +89,9 @@
         }
       }
     },
+    "A an example control that runs a timer." : {
+
+    },
     "Actions" : {
       "localizations" : {
         "en" : {
@@ -537,6 +540,17 @@
         }
       }
     },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chìa khoá"
+          }
+        }
+      }
+    },
     "Loading..." : {
       "localizations" : {
         "vi" : {
@@ -709,6 +723,17 @@
         }
       }
     },
+    "Nothing!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có!"
+          }
+        }
+      }
+    },
     "Notifications are not enabled. Please check you have notifications enabled in your app settings." : {
       "extractionState" : "manual",
       "localizations" : {
@@ -725,6 +750,9 @@
           }
         }
       }
+    },
+    "Off" : {
+
     },
     "OK" : {
       "localizations" : {
@@ -757,6 +785,9 @@
           }
         }
       }
+    },
+    "On" : {
+
     },
     "Oops!" : {
       "extractionState" : "manual",
@@ -1058,6 +1089,12 @@
         }
       }
     },
+    "Start a timer" : {
+
+    },
+    "Start Timer" : {
+
+    },
     "Status" : {
       "localizations" : {
         "en" : {
@@ -1110,6 +1147,12 @@
           }
         }
       }
+    },
+    "Timer" : {
+
+    },
+    "Timer is running" : {
+
     },
     "title" : {
       "localizations" : {
@@ -1179,6 +1222,17 @@
         }
       }
     },
+    "Up next…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp theo…"
+          }
+        }
+      }
+    },
     "Upgrade Today!" : {
       "localizations" : {
         "vi" : {
@@ -1188,6 +1242,20 @@
           }
         }
       }
+    },
+    "Your #1 top-priority issue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vấn đề ưu tiên số 1 của bạn"
+          }
+        }
+      }
+    },
+    "Your most important issues" : {
+
     }
   },
   "version" : "1.0"

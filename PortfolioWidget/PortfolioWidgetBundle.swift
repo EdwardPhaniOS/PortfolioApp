@@ -10,8 +10,9 @@ import SwiftUI
 
 @main
 struct PortfolioWidgetBundle: WidgetBundle {
-    var body: some Widget {
-        PortfolioWidget()
-        PortfolioWidgetControl()
-    }
+  var body: some Widget {
+    SimplePortfolioWidget()
+    ComplexPortfolioWidget()
+    PortfolioWidgetControl()
+  }
 }

@@ -19,7 +19,7 @@ struct ContentView: View {
       }
       .onDelete(perform: viewModel.delete)
     }
-    .onOpenURL(perform: openURL)
+    .onOpenURL(perform: viewModel.openURL)
     .navigationTitle("Issues")
     .searchable(
       text: $viewModel.filterText,
@@ -35,12 +35,6 @@ struct ContentView: View {
   init(dataController: DataController) {
     let viewModel = ViewModel(dataController: dataController)
     _viewModel = StateObject(wrappedValue: viewModel)
-  }
-  
-  func openURL(_ url: URL) {
-    if url.absoluteString.contains("newIssue") {
-      viewModel.newIssue()
-    }
   }
 }
 

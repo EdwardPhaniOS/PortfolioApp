@@ -64,6 +64,10 @@ extension Issue {
     issue.content = "This is an example issue."
     issue.priority = 2
     issue.creationDate = .now
+    
+    let tag = Tag(context: viewContext)
+    tag.name = "Example Tag"
+    issue.tags = [tag]
     return issue
   }
 }

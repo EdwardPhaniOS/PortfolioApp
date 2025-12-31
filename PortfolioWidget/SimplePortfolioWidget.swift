@@ -1,6 +1,6 @@
 //
-//  PortfolioWidget.swift
-//  PortfolioWidget
+//  SimplePortfolioWidget.swift
+//  SimplePortfolioWidget
 //
 //  Created by Vinh Phan on 29/12/25.
 //
@@ -8,7 +8,7 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+struct SimpleProvider: TimelineProvider {
   func placeholder(in context: Context) -> SimpleEntry {
     SimpleEntry(date: .now, issues: [.example])
   }
@@ -37,43 +37,48 @@ struct SimpleEntry: TimelineEntry {
   let issues: [Issue]
 }
 
-struct PortfolioWidgetEntryView: View {
-  var entry: Provider.Entry
+struct SimplePortfolioWidgetEntryView: View {
+  var entry: SimpleProvider.Entry
   
   var body: some View {
-    VStack {
-      Text("Up next...")
+    VStack(alignment: .leading) {
+      Text("Up next…")
       
       if let issue = entry.issues.first {
-        Text(issue.issueTitle)
+        Link(destination: issue.objectID.uriRepresentation()) { 
+          Text(issue.issueTitle)
+            .font(.headline)
+        }
       } else {
         Text("Nothing!")
+          .foregroundStyle(Color.accentColor)
       }
     }
   }
 }
 
-struct PortfolioWidget: Widget {
-  let kind: String = "PortfolioWidget"
+struct SimplePortfolioWidget: Widget {
+  let kind: String = "SimplePortfolioWidget"
   
   var body: some WidgetConfiguration {
-    StaticConfiguration(kind: kind, provider: Provider()) { entry in
+    StaticConfiguration(kind: kind, provider: SimpleProvider()) { entry in
       if #available(iOS 17.0, *) {
-        PortfolioWidgetEntryView(entry: entry)
-          .containerBackground(.fill.tertiary, for: .widget)
+        SimplePortfolioWidgetEntryView(entry: entry)
+          .containerBackground(.fill.opacity(0.1), for: .widget)
       } else {
-        PortfolioWidgetEntryView(entry: entry)
+        SimplePortfolioWidgetEntryView(entry: entry)
           .padding()
-          .background()
+          .background(Color.appTheme.viewBackground)
       }
     }
-    .configurationDisplayName("My Widget")
-    .description("This is an example widget.")
+    .configurationDisplayName("Up next…")
+    .description("Your #1 top-priority issue")
+    .supportedFamilies([.systemSmall])
   }
 }
 
 #Preview(as: .systemSmall) {
-  PortfolioWidget()
+  SimplePortfolioWidget()
 } timeline: {
   SimpleEntry(date: .now, issues: [.example])
   SimpleEntry(date: .now, issues: [.example])

@@ -71,6 +71,14 @@
 		35A0B88A2DD3886000BB9EA3 /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0B87F2DD3886000BB9EA3 /* UserFilterRow.swift */; };
 		35A0B8932DD38B8700BB9EA3 /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A0B8922DD38B8700BB9EA3 /* ContentViewToolbar.swift */; };
 		35A5C3982E066B3500E9C6EB /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 35A5C3972E066B3500E9C6EB /* Configuration.storekit */; };
+		35B13AC22F051C9A001F37EA /* SimplePortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */; };
+		35B13AC32F051C9A001F37EA /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */; };
+		35B13AC42F051C9A001F37EA /* PortfolioWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */; };
+		35B13AC52F051C9A001F37EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B13ABC2F051C9A001F37EA /* Assets.xcassets */; };
+		35B13AC72F051EFF001F37EA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 35B5D7132ED7664E00B83245 /* Localizable.xcstrings */; };
+		35B13ACB2F0521D8001F37EA /* ComplexPortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */; };
+		35B13ACC2F052941001F37EA /* View+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354596F82ED70119002F41DF /* View+Colors.swift */; };
+		35B13ACD2F052990001F37EA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356017482DB4E6F700919498 /* Colors.xcassets */; };
 		35B5D7142ED7664E00B83245 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 35B5D7132ED7664E00B83245 /* Localizable.xcstrings */; };
 		35C81A482DCF18B000FFD28D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 35C81A472DCF18B000FFD28D /* .swiftlint.yml */; };
 		35CA35EF2DD4E12B004AF02F /* AssetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CA35EE2DD4E12B004AF02F /* AssetTests.swift */; };
@@ -191,6 +199,12 @@
 		35A0B87F2DD3886000BB9EA3 /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		35A0B8922DD38B8700BB9EA3 /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
 		35A5C3972E066B3500E9C6EB /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		35B13ABC2F051C9A001F37EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		35B13ABD2F051C9A001F37EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePortfolioWidget.swift; sourceTree = "<group>"; };
+		35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetBundle.swift; sourceTree = "<group>"; };
+		35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetControl.swift; sourceTree = "<group>"; };
+		35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexPortfolioWidget.swift; sourceTree = "<group>"; };
 		35B5D7132ED7664E00B83245 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		35C81A472DCF18B000FFD28D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		35CA35E22DD4DDB0004AF02F /* PortfolioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,27 +225,6 @@
 		35F41B6D2EFBC5DC00FBA74E /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
 		35FB0D362D871807008267EC /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		353DE7062F029FC100113557 /* Exceptions for "PortfolioWidget" folder in "PortfolioWidgetExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 353DE6F22F029FBE00113557 /* PortfolioWidgetExtension */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		353DE6F92F029FBF00113557 /* PortfolioWidget */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				353DE7062F029FC100113557 /* Exceptions for "PortfolioWidget" folder in "PortfolioWidgetExtension" target */,
-			);
-			path = PortfolioWidget;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		351F24D92D8488DA00C07C4E /* Frameworks */ = {
@@ -275,7 +268,7 @@
 				352715BA2D8582AA003C16AB /* PortfolioApp */,
 				35CA35EC2DD4DDBE004AF02F /* PortfolioAppTests */,
 				354981A42DE20F66009BC2F0 /* PortfolioAppUITests */,
-				353DE6F92F029FBF00113557 /* PortfolioWidget */,
+				35B13AC12F051C9A001F37EA /* PortfolioWidget */,
 				353DE6F42F029FBE00113557 /* Frameworks */,
 				351F24DD2D8488DA00C07C4E /* Products */,
 			);
@@ -434,6 +427,19 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		35B13AC12F051C9A001F37EA /* PortfolioWidget */ = {
+			isa = PBXGroup;
+			children = (
+				35B13ABD2F051C9A001F37EA /* Info.plist */,
+				35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */,
+				35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */,
+				35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */,
+				35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */,
+				35B13ABC2F051C9A001F37EA /* Assets.xcassets */,
+			);
+			path = PortfolioWidget;
+			sourceTree = "<group>";
+		};
 		35CA35EC2DD4DDBE004AF02F /* PortfolioAppTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,9 +557,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				353DE6F92F029FBF00113557 /* PortfolioWidget */,
-			);
 			name = PortfolioWidgetExtension;
 			packageProductDependencies = (
 			);
@@ -669,6 +672,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B13ACD2F052990001F37EA /* Colors.xcassets in Resources */,
+				35B13AC72F051EFF001F37EA /* Localizable.xcstrings in Resources */,
+				35B13AC52F051C9A001F37EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,7 +788,12 @@
 				353DE70D2F02A11700113557 /* Issue+CoreDataHelper.swift in Sources */,
 				353DE70B2F02A0F500113557 /* Main.xcdatamodeld in Sources */,
 				353DE70C2F02A10800113557 /* Tag+CoreDataHelper.swift in Sources */,
+				35B13ACB2F0521D8001F37EA /* ComplexPortfolioWidget.swift in Sources */,
 				353DE7102F02A14B00113557 /* Filter.swift in Sources */,
+				35B13ACC2F052941001F37EA /* View+Colors.swift in Sources */,
+				35B13AC22F051C9A001F37EA /* SimplePortfolioWidget.swift in Sources */,
+				35B13AC32F051C9A001F37EA /* PortfolioWidgetBundle.swift in Sources */,
+				35B13AC42F051C9A001F37EA /* PortfolioWidgetControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,7 +996,6 @@
 				INFOPLIST_FILE = PortfolioApp/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -1022,7 +1032,6 @@
 				INFOPLIST_FILE = PortfolioApp/Configuration/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
