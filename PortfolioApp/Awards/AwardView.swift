@@ -45,9 +45,9 @@ struct AwardsView: View {
 
   var awardTitle: String {
     if dataController.hasEarned(award: selectedAward) {
-      return "Unlocked: \(selectedAward.name)"
+      return String(format: NSLocalizedString("Unlocked: %@", comment: ""), selectedAward.name)
     } else {
-      return "Locked"
+      return NSLocalizedString("Locked", comment: "")
     }
   }
 
@@ -55,8 +55,10 @@ struct AwardsView: View {
     dataController.hasEarned(award: award) ? Color(award.color) : .secondary.opacity(0.5)
   }
 
-  func label(for award: Award) -> LocalizedStringKey {
-    dataController.hasEarned(award: award) ? "Unlocked: \(award.name)" : "Locked"
+  func label(for award: Award) -> String {
+    dataController.hasEarned(award: award)
+    ? String(format: NSLocalizedString("Unlocked: %@", comment: ""), award.name)
+    : NSLocalizedString("Locked", comment: "")
   }
 }
 

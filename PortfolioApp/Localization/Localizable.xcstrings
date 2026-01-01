@@ -2,12 +2,11 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-      "extractionState" : "stale",
       "localizations" : {
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : " "
+            "value" : "“”"
           }
         }
       }
@@ -90,6 +89,9 @@
         }
       }
     },
+    "A an example control that runs a timer." : {
+      "shouldTranslate" : false
+    },
     "Actions" : {
       "localizations" : {
         "en" : {
@@ -106,30 +108,35 @@
         }
       }
     },
-    "Add Sample" : {
+    "Add New" : {
+      "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add Sample"
+            "value" : "Add New"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thêm mẫu"
+            "value" : "Thêm mới"
           }
         }
       }
     },
-    "Add Tag" : {
+    "ADD SAMPLES" : {
       "localizations" : {
-        "en" : {
+        "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Add Tag"
+            "value" : "THÊM MẪU"
           }
-        },
+        }
+      }
+    },
+    "Add tag" : {
+      "localizations" : {
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -149,7 +156,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Thêm thẻ"
+            "value" : "Thêm các thẻ"
           }
         }
       }
@@ -235,8 +242,42 @@
         }
       }
     },
+    "Check Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Settings"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check Settings"
+          }
+        }
+      }
+    },
+    "Close Issue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close Issue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đóng vấn đề"
+          }
+        }
+      }
+    },
     "Closed" : {
-      "comment" : "This issue has been resolved by the user",
+      "comment" : "This issue has been resolved by the user.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -263,7 +304,17 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Đã đóng"
+            "value" : "ĐÃ ĐÓNG"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục"
           }
         }
       }
@@ -284,18 +335,22 @@
         }
       }
     },
-    "Created date" : {
+    "Date Created" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Created date"
-          }
-        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ngày tạo"
+            "value" : "Ngày Tạo"
+          }
+        }
+      }
+    },
+    "Date Modified" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ngày Chỉnh Sửa"
           }
         }
       }
@@ -348,6 +403,16 @@
         }
       }
     },
+    "Done" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xong"
+          }
+        }
+      }
+    },
     "Enter the issue description here" : {
       "localizations" : {
         "en" : {
@@ -396,18 +461,12 @@
         }
       }
     },
-    "Filter issue, or type # to add tags" : {
+    "Filter issues" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter issue, or type # to add tags"
-          }
-        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lọc vấn đề hoặc nhấp # đê thêm thẻ"
+            "value" : "Lọc các vấn đề"
           }
         }
       }
@@ -429,6 +488,26 @@
         }
       }
     },
+    "Get Started" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt Đầu"
+          }
+        }
+      }
+    },
+    "Get the most out of the app" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tận dụng tối đa ứng dụng"
+          }
+        }
+      }
+    },
     "High" : {
       "localizations" : {
         "en" : {
@@ -445,23 +524,6 @@
         }
       }
     },
-    "High priority" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "High priority"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ưu tiên cao"
-          }
-        }
-      }
-    },
     "Issues" : {
       "localizations" : {
         "en" : {
@@ -474,6 +536,27 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Các vấn đề"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chìa khoá"
+          }
+        }
+      }
+    },
+    "Loading..." : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đang tải…"
           }
         }
       }
@@ -526,8 +609,26 @@
         }
       }
     },
+    "Modal View" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modal View"
+          }
+        }
+      }
+    },
     "New issue" : {
-      "comment" : "Create a new issue"
+      "comment" : "Create a new issue",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vấn đề mới"
+          }
+        }
+      }
     },
     "New Issue" : {
       "comment" : "Create a new issue",
@@ -540,20 +641,14 @@
         },
         "vi" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Các vấn đề gần đây"
+            "state" : "translated",
+            "value" : "Vấn Đề Mới"
           }
         }
       }
     },
     "New name" : {
       "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New name"
-          }
-        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
@@ -614,10 +709,54 @@
     "No tags" : {
       "comment" : "The user has not created any tags yet.",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No tags"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không có thẻ"
+          }
+        }
+      }
+    },
+    "Nothing!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Không có!"
+          }
+        }
+      }
+    },
+    "Notifications are not enabled. Please check you have notifications enabled in your app settings." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications are not enabled. Please check you have notifications enabled in your app settings."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiển thị thông báo chưa được cài đặt. Vui lòng kiểm tra xem bạn đã bật thông báo trong cài đặt ứng dụng chưa."
+          }
+        }
+      }
+    },
+    "Off" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt"
           }
         }
       }
@@ -654,8 +793,35 @@
         }
       }
     },
+    "On" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật"
+          }
+        }
+      }
+    },
+    "Oops!" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops!"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ồ!"
+          }
+        }
+      }
+    },
     "Open" : {
-      "comment" : "This issue is currently unresolved",
+      "comment" : "This issue is currently unresolved.",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -688,7 +854,6 @@
       }
     },
     "Re-open Issue" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -717,6 +882,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Các vấn đề gần đây"
+          }
+        }
+      }
+    },
+    "Reminder time" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminder time"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thời gian nhắc nhở"
+          }
+        }
+      }
+    },
+    "Reminders" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reminders"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lời nhắc nhở"
           }
         }
       }
@@ -753,6 +952,26 @@
         }
       }
     },
+    "Restore Purchases" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Khôi Phục Hàng Đã Mua"
+          }
+        }
+      }
+    },
+    "Show Alert" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiển thông báo"
+          }
+        }
+      }
+    },
     "Show awards" : {
       "localizations" : {
         "en" : {
@@ -769,6 +988,63 @@
         }
       }
     },
+    "Show Error" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiện lỗi"
+          }
+        }
+      }
+    },
+    "Show Modal - isPresenting" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Modal - isPresenting"
+          }
+        }
+      }
+    },
+    "Show Modal - item" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Modal - item"
+          }
+        }
+      }
+    },
+    "Show reminders" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show reminders"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hiển thị lời nhắc"
+          }
+        }
+      }
+    },
+    "Sign Out" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đăng xuất"
+          }
+        }
+      }
+    },
     "Smart Filters" : {
       "localizations" : {
         "en" : {
@@ -781,6 +1057,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bộ lọc thông minh"
+          }
+        }
+      }
+    },
+    "Sorry, there was an error loading our store." : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xin lỗi, đã có lỗi tải dữ liệu"
           }
         }
       }
@@ -817,6 +1103,12 @@
         }
       }
     },
+    "Start a timer" : {
+      "shouldTranslate" : false
+    },
+    "Start Timer" : {
+      "shouldTranslate" : false
+    },
     "Status" : {
       "localizations" : {
         "en" : {
@@ -833,6 +1125,27 @@
         }
       }
     },
+    "Subtitle" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phụ để"
+          }
+        }
+      }
+    },
+    "tags" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các thẻ"
+          }
+        }
+      }
+    },
     "Tags" : {
       "localizations" : {
         "en" : {
@@ -845,6 +1158,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Các thẻ"
+          }
+        }
+      }
+    },
+    "Timer" : {
+      "shouldTranslate" : false
+    },
+    "Timer is running" : {
+      "shouldTranslate" : false
+    },
+    "title" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tiêu đề"
           }
         }
       }
@@ -897,28 +1226,60 @@
         }
       }
     },
-    "Unlocked %@" : {
-      "localizations" : {
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Đã mở khoá %@"
-          }
-        }
-      }
-    },
-    "Updated date" : {
+    "Unlocked: %@" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Updated date"
+            "value" : "Unlocked: %@"
           }
         },
         "vi" : {
           "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Mở khoá: %@"
+          }
+        }
+      }
+    },
+    "Up next…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
             "state" : "translated",
-            "value" : "Ngày cập nhật"
+            "value" : "Tiếp theo…"
+          }
+        }
+      }
+    },
+    "Upgrade Today!" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nâng cấp ngay!"
+          }
+        }
+      }
+    },
+    "Your #1 top-priority issue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vấn đề ưu tiên số 1 của bạn"
+          }
+        }
+      }
+    },
+    "Your most important issues" : {
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các vấn đề quan trọng nhất"
           }
         }
       }

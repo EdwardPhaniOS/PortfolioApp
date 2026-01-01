@@ -184,7 +184,6 @@
 		3560174B2DB4E86900919498 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		35836BDD2DEB4D57004F142C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		35836BDF2DEB5117004F142C /* IssueRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowModel.swift; sourceTree = "<group>"; };
-		358A01902F00EB1800223719 /* PortfolioApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioApp.entitlements; sourceTree = "<group>"; };
 		358A01912F011B2900223719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		358A01932F011B2C00223719 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		35A0B8762DD3886000BB9EA3 /* AwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardView.swift; sourceTree = "<group>"; };
@@ -206,6 +205,7 @@
 		35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetControl.swift; sourceTree = "<group>"; };
 		35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexPortfolioWidget.swift; sourceTree = "<group>"; };
 		35B5D7132ED7664E00B83245 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		35C4FDDB2F06DBE1003A6C92 /* PortfolioApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioApp.entitlements; sourceTree = "<group>"; };
 		35C81A472DCF18B000FFD28D /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = SOURCE_ROOT; };
 		35CA35E22DD4DDB0004AF02F /* PortfolioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PortfolioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CA35EE2DD4E12B004AF02F /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
@@ -263,13 +263,11 @@
 		351F24D32D8488DA00C07C4E = {
 			isa = PBXGroup;
 			children = (
-				354B0C742F03DF3C00DD2B6E /* PortfolioWidgetExtension.entitlements */,
-				35A0B88E2DD388C400BB9EA3 /* Localization */,
+				353DE6F42F029FBE00113557 /* Frameworks */,
 				352715BA2D8582AA003C16AB /* PortfolioApp */,
 				35CA35EC2DD4DDBE004AF02F /* PortfolioAppTests */,
 				354981A42DE20F66009BC2F0 /* PortfolioAppUITests */,
 				35B13AC12F051C9A001F37EA /* PortfolioWidget */,
-				353DE6F42F029FBE00113557 /* Frameworks */,
 				351F24DD2D8488DA00C07C4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -296,23 +294,23 @@
 		352715BA2D8582AA003C16AB /* PortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
-				358A01902F00EB1800223719 /* PortfolioApp.entitlements */,
-				352715B82D8582AA003C16AB /* PortfolioAppApp.swift */,
-				35A0B88F2DD3892600BB9EA3 /* Configuration */,
-				35F41B602EFBBE2D00FBA74E /* Awards */,
-				35F41B5F2EFBBD5D00FBA74E /* Editing */,
-				35F41B5E2EFBBC7F00FBA74E /* Issues */,
-				35F41B5D2EFBBB9900FBA74E /* Filters */,
-				35F41B522EFBBA0100FBA74E /* Store */,
-				354596F22ED6FF2E002F41DF /* Alert */,
-				35A0B88D2DD388B600BB9EA3 /* Extensions */,
-				354596F42ED7001D002F41DF /* Resource */,
-				35F41B552EFBBA6A00FBA74E /* DataController.swift */,
+				358A01912F011B2900223719 /* AppDelegate.swift */,
+				353DE7132F02A1E200113557 /* DataController-Award.swift */,
 				35F41B592EFBBAC900FBA74E /* DataController-Notifications.swift */,
 				35F41B5B2EFBBB4C00FBA74E /* DataController-StoreKit.swift */,
-				353DE7132F02A1E200113557 /* DataController-Award.swift */,
-				358A01912F011B2900223719 /* AppDelegate.swift */,
+				35F41B552EFBBA6A00FBA74E /* DataController.swift */,
+				352715B82D8582AA003C16AB /* PortfolioAppApp.swift */,
 				358A01932F011B2C00223719 /* SceneDelegate.swift */,
+				354596F22ED6FF2E002F41DF /* Alert */,
+				35F41B602EFBBE2D00FBA74E /* Awards */,
+				35A0B88F2DD3892600BB9EA3 /* Configuration */,
+				35F41B5F2EFBBD5D00FBA74E /* Editing */,
+				35A0B88D2DD388B600BB9EA3 /* Extensions */,
+				35F41B5D2EFBBB9900FBA74E /* Filters */,
+				35F41B5E2EFBBC7F00FBA74E /* Issues */,
+				35A0B88E2DD388C400BB9EA3 /* Localization */,
+				354596F42ED7001D002F41DF /* Resource */,
+				35F41B522EFBBA0100FBA74E /* Store */,
 			);
 			path = PortfolioApp;
 			sourceTree = "<group>";
@@ -423,6 +421,7 @@
 				352715B62D8582AA003C16AB /* Info.plist */,
 				352715B72D8582AA003C16AB /* Main.xcdatamodeld */,
 				35A5C3972E066B3500E9C6EB /* Configuration.storekit */,
+				35C4FDDB2F06DBE1003A6C92 /* PortfolioApp.entitlements */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -436,6 +435,7 @@
 				35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */,
 				35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */,
 				35B13ABC2F051C9A001F37EA /* Assets.xcassets */,
+				354B0C742F03DF3C00DD2B6E /* PortfolioWidgetExtension.entitlements */,
 			);
 			path = PortfolioWidget;
 			sourceTree = "<group>";
@@ -985,7 +985,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = PortfolioApp/PortfolioApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PortfolioApp/Configuration/PortfolioApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
@@ -1021,7 +1021,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
-				CODE_SIGN_ENTITLEMENTS = PortfolioApp/PortfolioApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PortfolioApp/Configuration/PortfolioApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
@@ -1056,7 +1056,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = PortfolioWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PortfolioWidget/PortfolioWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRX889FW83;
@@ -1085,7 +1085,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = PortfolioWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = PortfolioWidget/PortfolioWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRX889FW83;
