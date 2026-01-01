@@ -11,7 +11,7 @@ import AppIntents
 
 struct ContentView: View {
   @StateObject var viewModel: ViewModel
-  
+
   var body: some View {
     List(selection: $viewModel.selectedIssue) {
       ForEach(viewModel.dataController.issuesForSelectedFilter()) { issue in
@@ -24,10 +24,19 @@ struct ContentView: View {
     .searchable(
       text: $viewModel.filterText,
       tokens: $viewModel.filterTokens,
-      suggestedTokens: .constant(viewModel.suggestedFilterTokens),
       prompt: "Filter issues"
     ) { tag in
       Text(tag.tagName)
+    }
+    .searchSuggestions {
+      ForEach(viewModel.suggestedFilterTokens) { tag in
+        Text(tag.tagName)
+          .foregroundStyle(Color.appTheme.accent)
+          .button { 
+            viewModel.filterTokens.append(tag)
+            viewModel.filterText = ""
+          }
+      }
     }
     .toolbar(content: ContentViewToolbar.init)
   }

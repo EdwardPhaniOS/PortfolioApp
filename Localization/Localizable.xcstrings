@@ -90,7 +90,7 @@
       }
     },
     "A an example control that runs a timer." : {
-
+      "shouldTranslate" : false
     },
     "Actions" : {
       "localizations" : {
@@ -752,7 +752,14 @@
       }
     },
     "Off" : {
-
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tắt"
+          }
+        }
+      }
     },
     "OK" : {
       "localizations" : {
@@ -787,7 +794,14 @@
       }
     },
     "On" : {
-
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bật"
+          }
+        }
+      }
     },
     "Oops!" : {
       "extractionState" : "manual",
@@ -1090,10 +1104,10 @@
       }
     },
     "Start a timer" : {
-
+      "shouldTranslate" : false
     },
     "Start Timer" : {
-
+      "shouldTranslate" : false
     },
     "Status" : {
       "localizations" : {
@@ -1149,10 +1163,10 @@
       }
     },
     "Timer" : {
-
+      "shouldTranslate" : false
     },
     "Timer is running" : {
-
+      "shouldTranslate" : false
     },
     "title" : {
       "localizations" : {
@@ -1255,7 +1269,14 @@
       }
     },
     "Your most important issues" : {
-
+      "localizations" : {
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Các vấn đề quan trọng nhất"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
