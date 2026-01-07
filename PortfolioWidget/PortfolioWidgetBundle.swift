@@ -13,6 +13,5 @@ struct PortfolioWidgetBundle: WidgetBundle {
   var body: some Widget {
     SimplePortfolioWidget()
     ComplexPortfolioWidget()
-//    PortfolioWidgetControl()
   }
 }

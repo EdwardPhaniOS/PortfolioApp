@@ -60,7 +60,6 @@
 		356CC1C22F0E682B001B9047 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F52F029FBE00113557 /* WidgetKit.framework */; };
 		356CC1C32F0E682B001B9047 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F72F029FBF00113557 /* SwiftUI.framework */; };
 		356CC1D12F0E682D001B9047 /* PortfolioWidgetMacExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		356CC1DD2F0E6833001B9047 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CC1D62F0E6833001B9047 /* AppIntent.swift */; };
 		356CC1E02F0E6833001B9047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CC1D72F0E6833001B9047 /* Assets.xcassets */; };
 		356CC1E22F0E6854001B9047 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715C52D858396003C16AB /* Filter.swift */; };
 		356CC1E32F0E6863001B9047 /* Issue+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D112D86CDFC005FF24A /* Issue+CoreDataHelper.swift */; };
@@ -92,7 +91,6 @@
 		35A5C3982E066B3500E9C6EB /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 35A5C3972E066B3500E9C6EB /* Configuration.storekit */; };
 		35B13AC22F051C9A001F37EA /* SimplePortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */; };
 		35B13AC32F051C9A001F37EA /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */; };
-		35B13AC42F051C9A001F37EA /* PortfolioWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */; };
 		35B13AC52F051C9A001F37EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35B13ABC2F051C9A001F37EA /* Assets.xcassets */; };
 		35B13AC72F051EFF001F37EA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 35B5D7132ED7664E00B83245 /* Localizable.xcstrings */; };
 		35B13ACB2F0521D8001F37EA /* ComplexPortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */; };
@@ -212,7 +210,6 @@
 		356CC1452F0E5AFD001B9047 /* View+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBar.swift"; sourceTree = "<group>"; };
 		356CC14A2F0E5EBC001B9047 /* ScreenSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeHelper.swift; sourceTree = "<group>"; };
 		356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PortfolioWidgetMacExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		356CC1D62F0E6833001B9047 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		356CC1D72F0E6833001B9047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		356CC1D82F0E6833001B9047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		356CC1D92F0E6833001B9047 /* PortfolioWidgetMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioWidgetMac.entitlements; sourceTree = "<group>"; };
@@ -237,7 +234,6 @@
 		35B13ABD2F051C9A001F37EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePortfolioWidget.swift; sourceTree = "<group>"; };
 		35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetBundle.swift; sourceTree = "<group>"; };
-		35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioWidgetControl.swift; sourceTree = "<group>"; };
 		35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexPortfolioWidget.swift; sourceTree = "<group>"; };
 		35B5D7132ED7664E00B83245 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		35C4FDDB2F06DBE1003A6C92 /* PortfolioApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioApp.entitlements; sourceTree = "<group>"; };
@@ -452,7 +448,6 @@
 		356CC1DC2F0E6833001B9047 /* PortfolioWidgetMac */ = {
 			isa = PBXGroup;
 			children = (
-				356CC1D62F0E6833001B9047 /* AppIntent.swift */,
 				356CC1D72F0E6833001B9047 /* Assets.xcassets */,
 				356CC1D82F0E6833001B9047 /* Info.plist */,
 				356CC1D92F0E6833001B9047 /* PortfolioWidgetMac.entitlements */,
@@ -500,7 +495,6 @@
 				35B13ABD2F051C9A001F37EA /* Info.plist */,
 				35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */,
 				35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */,
-				35B13AC02F051C9A001F37EA /* PortfolioWidgetControl.swift */,
 				35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */,
 				35B13ABC2F051C9A001F37EA /* Assets.xcassets */,
 				354B0C742F03DF3C00DD2B6E /* PortfolioWidgetExtension.entitlements */,
@@ -897,7 +891,6 @@
 				35B13ACC2F052941001F37EA /* View+Colors.swift in Sources */,
 				35B13AC22F051C9A001F37EA /* SimplePortfolioWidget.swift in Sources */,
 				35B13AC32F051C9A001F37EA /* PortfolioWidgetBundle.swift in Sources */,
-				35B13AC42F051C9A001F37EA /* PortfolioWidgetControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,7 +910,6 @@
 				356CC1E32F0E6863001B9047 /* Issue+CoreDataHelper.swift in Sources */,
 				356CC1E42F0E686B001B9047 /* Tag+CoreDataHelper.swift in Sources */,
 				356CC1E82F0E6896001B9047 /* PortfolioWidgetBundle.swift in Sources */,
-				356CC1DD2F0E6833001B9047 /* AppIntent.swift in Sources */,
 				356CC1E92F0E689E001B9047 /* SimplePortfolioWidget.swift in Sources */,
 				356CC1EA2F0E68A7001B9047 /* ComplexPortfolioWidget.swift in Sources */,
 				356CC1E72F0E6889001B9047 /* DataController-StoreKit.swift in Sources */,
