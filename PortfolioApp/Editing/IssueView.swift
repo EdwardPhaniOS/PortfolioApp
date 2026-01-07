@@ -21,6 +21,7 @@ struct IssueView: View {
         VStack(alignment: .leading) {
           TextField("Title", text: $issue.issueTitle, prompt: Text("Enter the issue title here"))
             .font(.title)
+            .labelsHidden()
 
           Text("**Modified:** \(issue.issueModificationDate.formatted(date: .long, time: .shortened))")
             .foregroundStyle(.secondary)
@@ -50,6 +51,7 @@ struct IssueView: View {
             prompt: Text("Enter the issue description here"),
             axis: .vertical
           )
+          .labelsHidden()
         }
       }
 
@@ -80,8 +82,10 @@ struct IssueView: View {
     .onChange(of: issue.reminderTime) { _ in
       updateReminder()
     }
+    .formStyle(.grouped)
   }
 
+  #if os(iOS)
   func showAppSettings() {
     guard let settingsURL = URL(string: UIApplication.openNotificationSettingsURLString) else {
       return
@@ -89,6 +93,7 @@ struct IssueView: View {
 
     openURL(settingsURL)
   }
+#endif
 
   func updateReminder() {
     dataController.removeReminders(for: issue)
@@ -100,8 +105,11 @@ struct IssueView: View {
         if success == false {
           issue.reminderEnabled = false
           showingNotificationsError = true
-
-          let action = AppAlert.ActionButton(title: "Check Settings", action: showAppSettings)
+          
+          var action: AppAlert.ActionButton?
+#if os(iOS)
+          action = AppAlert.ActionButton(title: "Check Settings", action: showAppSettings)
+#endif
           appAlert = AppAlert(title: "Oops!", message: "There was a problem setting your notification. Please check you have notifications enabled.", actionButton: action)
         }
       }

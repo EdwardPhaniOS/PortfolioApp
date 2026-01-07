@@ -23,7 +23,7 @@ struct ErrorView: View {
     .padding()
     .background(Color.appTheme.cellBackground)
     .cornerRadius(.cell)
-    .frame(width: UIScreen.main.bounds.width / 1.2)
+    .frame(width: ScreenSizeHelper.screenWidth / 1.2)
   }
 }
 

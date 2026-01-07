@@ -36,6 +36,7 @@ struct SidebarView: View {
       TextField("New name", text: $viewModel.tagName)
     }
     .navigationTitle("Filters")
+    .macFrame(minWidth: 220)
   }
 }
 

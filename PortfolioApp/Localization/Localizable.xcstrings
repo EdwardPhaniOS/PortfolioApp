@@ -89,9 +89,6 @@
         }
       }
     },
-    "A an example control that runs a timer." : {
-      "shouldTranslate" : false
-    },
     "Actions" : {
       "localizations" : {
         "en" : {
@@ -258,6 +255,9 @@
           }
         }
       }
+    },
+    "Close" : {
+
     },
     "Close Issue" : {
       "extractionState" : "manual",
@@ -752,6 +752,7 @@
       }
     },
     "Off" : {
+      "extractionState" : "stale",
       "localizations" : {
         "vi" : {
           "stringUnit" : {
@@ -794,6 +795,7 @@
       }
     },
     "On" : {
+      "extractionState" : "stale",
       "localizations" : {
         "vi" : {
           "stringUnit" : {
@@ -1103,12 +1105,6 @@
         }
       }
     },
-    "Start a timer" : {
-      "shouldTranslate" : false
-    },
-    "Start Timer" : {
-      "shouldTranslate" : false
-    },
     "Status" : {
       "localizations" : {
         "en" : {
@@ -1161,12 +1157,6 @@
           }
         }
       }
-    },
-    "Timer" : {
-      "shouldTranslate" : false
-    },
-    "Timer is running" : {
-      "shouldTranslate" : false
     },
     "title" : {
       "localizations" : {

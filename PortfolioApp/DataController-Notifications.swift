@@ -57,9 +57,8 @@ extension DataController {
             content.subtitle = issueContent
         }
 
-//        let components = Calendar.current.dateComponents([.hour, .minute], from: issue.issueReminderTime)
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let components = Calendar.current.dateComponents([.hour, .minute], from: issue.issueReminderTime)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
 
         let id = issue.objectID.uriRepresentation().absoluteString
         let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)

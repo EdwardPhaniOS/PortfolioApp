@@ -39,6 +39,7 @@ struct ContentView: View {
       }
     }
     .toolbar(content: ContentViewToolbar.init)
+    .macFrame(minWidth: 220)
   }
   
   init(dataController: DataController) {

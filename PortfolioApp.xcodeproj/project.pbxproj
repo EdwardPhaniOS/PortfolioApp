@@ -21,7 +21,7 @@
 		353DE6ED2F028DB500113557 /* NewIssueShortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353DE6EC2F028DB500113557 /* NewIssueShortcuts.swift */; };
 		353DE6F62F029FBF00113557 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F52F029FBE00113557 /* WidgetKit.framework */; };
 		353DE6F82F029FBF00113557 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F72F029FBF00113557 /* SwiftUI.framework */; };
-		353DE7052F029FC100113557 /* PortfolioWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 353DE6F32F029FBE00113557 /* PortfolioWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		353DE7052F029FC100113557 /* PortfolioWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 353DE6F32F029FBE00113557 /* PortfolioWidgetExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		353DE70B2F02A0F500113557 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352715B72D8582AA003C16AB /* Main.xcdatamodeld */; };
 		353DE70C2F02A10800113557 /* Tag+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D132D86CF27005FF24A /* Tag+CoreDataHelper.swift */; };
 		353DE70D2F02A11700113557 /* Issue+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D112D86CDFC005FF24A /* Issue+CoreDataHelper.swift */; };
@@ -55,6 +55,25 @@
 		355A177A2DC1235600D24A4C /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 355A17792DC1235600D24A4C /* Awards.json */; };
 		3560174A2DB4E6F700919498 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356017482DB4E6F700919498 /* Colors.xcassets */; };
 		3560174C2DB4E86900919498 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560174B2DB4E86900919498 /* Award.swift */; };
+		356CC1462F0E5AFD001B9047 /* View+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CC1452F0E5AFD001B9047 /* View+NavigationBar.swift */; };
+		356CC14B2F0E5EBC001B9047 /* ScreenSizeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CC14A2F0E5EBC001B9047 /* ScreenSizeHelper.swift */; };
+		356CC1C22F0E682B001B9047 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F52F029FBE00113557 /* WidgetKit.framework */; };
+		356CC1C32F0E682B001B9047 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 353DE6F72F029FBF00113557 /* SwiftUI.framework */; };
+		356CC1D12F0E682D001B9047 /* PortfolioWidgetMacExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		356CC1DD2F0E6833001B9047 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CC1D62F0E6833001B9047 /* AppIntent.swift */; };
+		356CC1E02F0E6833001B9047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356CC1D72F0E6833001B9047 /* Assets.xcassets */; };
+		356CC1E22F0E6854001B9047 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352715C52D858396003C16AB /* Filter.swift */; };
+		356CC1E32F0E6863001B9047 /* Issue+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D112D86CDFC005FF24A /* Issue+CoreDataHelper.swift */; };
+		356CC1E42F0E686B001B9047 /* Tag+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35258D132D86CF27005FF24A /* Tag+CoreDataHelper.swift */; };
+		356CC1E52F0E6876001B9047 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352715B72D8582AA003C16AB /* Main.xcdatamodeld */; };
+		356CC1E62F0E687F001B9047 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B552EFBBA6A00FBA74E /* DataController.swift */; };
+		356CC1E72F0E6889001B9047 /* DataController-StoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F41B5B2EFBBB4C00FBA74E /* DataController-StoreKit.swift */; };
+		356CC1E82F0E6896001B9047 /* PortfolioWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABF2F051C9A001F37EA /* PortfolioWidgetBundle.swift */; };
+		356CC1E92F0E689E001B9047 /* SimplePortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ABE2F051C9A001F37EA /* SimplePortfolioWidget.swift */; };
+		356CC1EA2F0E68A7001B9047 /* ComplexPortfolioWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B13ACA2F0521D8001F37EA /* ComplexPortfolioWidget.swift */; };
+		356CC1EB2F0E68AF001B9047 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 356017482DB4E6F700919498 /* Colors.xcassets */; };
+		356CC1EC2F0E68B3001B9047 /* View+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354596F82ED70119002F41DF /* View+Colors.swift */; };
+		356CC1EE2F0E7742001B9047 /* View+MacFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356CC1ED2F0E7742001B9047 /* View+MacFrame.swift */; };
 		35836BDE2DEB4D57004F142C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35836BDD2DEB4D57004F142C /* ContentViewModel.swift */; };
 		35836BE02DEB5117004F142C /* IssueRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35836BDF2DEB5117004F142C /* IssueRowModel.swift */; };
 		358A01922F011B2900223719 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358A01912F011B2900223719 /* AppDelegate.swift */; };
@@ -112,6 +131,13 @@
 			remoteGlobalIDString = 351F24DB2D8488DA00C07C4E;
 			remoteInfo = PortfolioApp;
 		};
+		356CC1CF2F0E682D001B9047 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 351F24D42D8488DA00C07C4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 356CC1C02F0E682B001B9047;
+			remoteInfo = PortfolioWidgetMacExtension;
+		};
 		35CA35E62DD4DDB0004AF02F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 351F24D42D8488DA00C07C4E /* Project object */;
@@ -129,6 +155,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				353DE7052F029FC100113557 /* PortfolioWidgetExtension.appex in Embed Foundation Extensions */,
+				356CC1D12F0E682D001B9047 /* PortfolioWidgetMacExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +209,14 @@
 		355A17782DC1235600D24A4C /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = vi; path = vi.lproj/Awards.json; sourceTree = "<group>"; };
 		356017482DB4E6F700919498 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = ../Colors.xcassets; sourceTree = "<group>"; };
 		3560174B2DB4E86900919498 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		356CC1452F0E5AFD001B9047 /* View+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBar.swift"; sourceTree = "<group>"; };
+		356CC14A2F0E5EBC001B9047 /* ScreenSizeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizeHelper.swift; sourceTree = "<group>"; };
+		356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PortfolioWidgetMacExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		356CC1D62F0E6833001B9047 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		356CC1D72F0E6833001B9047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		356CC1D82F0E6833001B9047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		356CC1D92F0E6833001B9047 /* PortfolioWidgetMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PortfolioWidgetMac.entitlements; sourceTree = "<group>"; };
+		356CC1ED2F0E7742001B9047 /* View+MacFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MacFrame.swift"; sourceTree = "<group>"; };
 		35836BDD2DEB4D57004F142C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		35836BDF2DEB5117004F142C /* IssueRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRowModel.swift; sourceTree = "<group>"; };
 		358A01912F011B2900223719 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +285,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		356CC1BE2F0E682B001B9047 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356CC1C32F0E682B001B9047 /* SwiftUI.framework in Frameworks */,
+				356CC1C22F0E682B001B9047 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35CA35DF2DD4DDB0004AF02F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +312,7 @@
 				35CA35EC2DD4DDBE004AF02F /* PortfolioAppTests */,
 				354981A42DE20F66009BC2F0 /* PortfolioAppUITests */,
 				35B13AC12F051C9A001F37EA /* PortfolioWidget */,
+				356CC1DC2F0E6833001B9047 /* PortfolioWidgetMac */,
 				351F24DD2D8488DA00C07C4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -279,6 +324,7 @@
 				35CA35E22DD4DDB0004AF02F /* PortfolioAppTests.xctest */,
 				354981972DE20EAD009BC2F0 /* PortfolioAppUITests.xctest */,
 				353DE6F32F029FBE00113557 /* PortfolioWidgetExtension.appex */,
+				356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +340,7 @@
 		352715BA2D8582AA003C16AB /* PortfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				356CC1472F0E5E9D001B9047 /* Utilities */,
 				358A01912F011B2900223719 /* AppDelegate.swift */,
 				353DE7132F02A1E200113557 /* DataController-Award.swift */,
 				35F41B592EFBBAC900FBA74E /* DataController-Notifications.swift */,
@@ -369,6 +416,8 @@
 				354596FE2ED70119002F41DF /* View+ShowAlert.swift */,
 				354596FF2ED70119002F41DF /* View+ShowError.swift */,
 				354597012ED70119002F41DF /* View+TextField.swift */,
+				356CC1452F0E5AFD001B9047 /* View+NavigationBar.swift */,
+				356CC1ED2F0E7742001B9047 /* View+MacFrame.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +439,25 @@
 				354981A32DE20F66009BC2F0 /* PortfolioAppUITestsLaunchTests.swift */,
 			);
 			path = PortfolioAppUITests;
+			sourceTree = "<group>";
+		};
+		356CC1472F0E5E9D001B9047 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				356CC14A2F0E5EBC001B9047 /* ScreenSizeHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		356CC1DC2F0E6833001B9047 /* PortfolioWidgetMac */ = {
+			isa = PBXGroup;
+			children = (
+				356CC1D62F0E6833001B9047 /* AppIntent.swift */,
+				356CC1D72F0E6833001B9047 /* Assets.xcassets */,
+				356CC1D82F0E6833001B9047 /* Info.plist */,
+				356CC1D92F0E6833001B9047 /* PortfolioWidgetMac.entitlements */,
+			);
+			path = PortfolioWidgetMac;
 			sourceTree = "<group>";
 		};
 		35A0B88D2DD388B600BB9EA3 /* Extensions */ = {
@@ -537,6 +605,7 @@
 			);
 			dependencies = (
 				353DE7042F029FC100113557 /* PBXTargetDependency */,
+				356CC1D02F0E682D001B9047 /* PBXTargetDependency */,
 			);
 			name = PortfolioApp;
 			packageProductDependencies = (
@@ -584,6 +653,25 @@
 			productReference = 354981972DE20EAD009BC2F0 /* PortfolioAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		356CC1C02F0E682B001B9047 /* PortfolioWidgetMacExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 356CC1D32F0E682D001B9047 /* Build configuration list for PBXNativeTarget "PortfolioWidgetMacExtension" */;
+			buildPhases = (
+				356CC1BD2F0E682B001B9047 /* Sources */,
+				356CC1BE2F0E682B001B9047 /* Frameworks */,
+				356CC1BF2F0E682B001B9047 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PortfolioWidgetMacExtension;
+			packageProductDependencies = (
+			);
+			productName = PortfolioWidgetMacExtension;
+			productReference = 356CC1C12F0E682B001B9047 /* PortfolioWidgetMacExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		35CA35E12DD4DDB0004AF02F /* PortfolioAppTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35CA35EA2DD4DDB0004AF02F /* Build configuration list for PBXNativeTarget "PortfolioAppTests" */;
@@ -624,6 +712,9 @@
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = 351F24DB2D8488DA00C07C4E;
 					};
+					356CC1C02F0E682B001B9047 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					35CA35E12DD4DDB0004AF02F = {
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = 351F24DB2D8488DA00C07C4E;
@@ -649,6 +740,7 @@
 				35CA35E12DD4DDB0004AF02F /* PortfolioAppTests */,
 				354981962DE20EAD009BC2F0 /* PortfolioAppUITests */,
 				353DE6F22F029FBE00113557 /* PortfolioWidgetExtension */,
+				356CC1C02F0E682B001B9047 /* PortfolioWidgetMacExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -682,6 +774,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		356CC1BF2F0E682B001B9047 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356CC1E02F0E6833001B9047 /* Assets.xcassets in Resources */,
+				356CC1EB2F0E68AF001B9047 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +838,7 @@
 				35F41B542EFBBA2000FBA74E /* StoreView.swift in Sources */,
 				358A01922F011B2900223719 /* AppDelegate.swift in Sources */,
 				35F41B5A2EFBBAC900FBA74E /* DataController-Notifications.swift in Sources */,
+				356CC1462F0E5AFD001B9047 /* View+NavigationBar.swift in Sources */,
 				35836BE02DEB5117004F142C /* IssueRowModel.swift in Sources */,
 				35258D142D86CF27005FF24A /* Tag+CoreDataHelper.swift in Sources */,
 				35FB0D372D871807008267EC /* IssueRow.swift in Sources */,
@@ -761,6 +863,8 @@
 				3545970D2ED70119002F41DF /* View+Button.swift in Sources */,
 				3545970E2ED70119002F41DF /* View+CornerRadius.swift in Sources */,
 				3545970F2ED70119002F41DF /* View+Shadow.swift in Sources */,
+				356CC14B2F0E5EBC001B9047 /* ScreenSizeHelper.swift in Sources */,
+				356CC1EE2F0E7742001B9047 /* View+MacFrame.swift in Sources */,
 				353DE6EB2F028C8000113557 /* NewIssueIntent.swift in Sources */,
 				358A01942F011B2C00223719 /* SceneDelegate.swift in Sources */,
 				35A0B8842DD3886000BB9EA3 /* IssueView.swift in Sources */,
@@ -806,6 +910,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		356CC1BD2F0E682B001B9047 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				356CC1E32F0E6863001B9047 /* Issue+CoreDataHelper.swift in Sources */,
+				356CC1E42F0E686B001B9047 /* Tag+CoreDataHelper.swift in Sources */,
+				356CC1E82F0E6896001B9047 /* PortfolioWidgetBundle.swift in Sources */,
+				356CC1DD2F0E6833001B9047 /* AppIntent.swift in Sources */,
+				356CC1E92F0E689E001B9047 /* SimplePortfolioWidget.swift in Sources */,
+				356CC1EA2F0E68A7001B9047 /* ComplexPortfolioWidget.swift in Sources */,
+				356CC1E72F0E6889001B9047 /* DataController-StoreKit.swift in Sources */,
+				356CC1E22F0E6854001B9047 /* Filter.swift in Sources */,
+				356CC1E52F0E6876001B9047 /* Main.xcdatamodeld in Sources */,
+				356CC1E62F0E687F001B9047 /* DataController.swift in Sources */,
+				356CC1EC2F0E68B3001B9047 /* View+Colors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35CA35DE2DD4DDB0004AF02F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -825,6 +947,7 @@
 /* Begin PBXTargetDependency section */
 		353DE7042F029FC100113557 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 353DE6F22F029FBE00113557 /* PortfolioWidgetExtension */;
 			targetProxy = 353DE7032F029FC100113557 /* PBXContainerItemProxy */;
 		};
@@ -832,6 +955,14 @@
 			isa = PBXTargetDependency;
 			target = 351F24DB2D8488DA00C07C4E /* PortfolioApp */;
 			targetProxy = 3549819D2DE20EAD009BC2F0 /* PBXContainerItemProxy */;
+		};
+		356CC1D02F0E682D001B9047 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilters = (
+				macos,
+			);
+			target = 356CC1C02F0E682B001B9047 /* PortfolioWidgetMacExtension */;
+			targetProxy = 356CC1CF2F0E682D001B9047 /* PBXContainerItemProxy */;
 		};
 		35CA35E72DD4DDB0004AF02F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -990,6 +1121,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = DRX889FW83;
+				ENABLE_CODE_COVERAGE = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1003,11 +1135,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VinhPhan.PortfolioApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				REGISTER_APP_GROUPS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1026,6 +1161,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PortfolioApp/Resource/Preview Content\"";
 				DEVELOPMENT_TEAM = DRX889FW83;
+				ENABLE_CODE_COVERAGE = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1039,11 +1175,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VinhPhan.PortfolioApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				REGISTER_APP_GROUPS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1064,7 +1203,7 @@
 				INFOPLIST_FILE = PortfolioWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1093,7 +1232,7 @@
 				INFOPLIST_FILE = PortfolioWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1148,6 +1287,66 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PortfolioApp;
+			};
+			name = Release;
+		};
+		356CC1D42F0E682D001B9047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PortfolioWidgetMac/PortfolioWidgetMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DRX889FW83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PortfolioWidgetMac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidgetMac;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VinhPhan.PortfolioApp.PortfolioWidgetMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		356CC1D52F0E682D001B9047 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = PortfolioWidgetMac/PortfolioWidgetMac.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DRX889FW83;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PortfolioWidgetMac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PortfolioWidgetMac;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = VinhPhan.PortfolioApp.PortfolioWidgetMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1230,6 +1429,15 @@
 			buildConfigurations = (
 				3549819F2DE20EAD009BC2F0 /* Debug */,
 				354981A02DE20EAD009BC2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		356CC1D32F0E682D001B9047 /* Build configuration list for PBXNativeTarget "PortfolioWidgetMacExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				356CC1D42F0E682D001B9047 /* Debug */,
+				356CC1D52F0E682D001B9047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

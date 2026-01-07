@@ -23,6 +23,8 @@ struct ContentViewToolbar: View {
           Text("Date Created").tag(SortType.dateCreated)
           Text("Date Modified").tag(SortType.dateModified)
         }
+        .pickerStyle(.inline)
+        .labelsHidden()
         
         Divider()
         
@@ -49,10 +51,12 @@ struct ContentViewToolbar: View {
     } label: {
       Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
         .symbolVariant(dataController.filterEnabled ? .fill : .none)
+        .help("Filter")
     }
     
     Button(action: dataController.newIssue) {
       Label("New Issue", systemImage: "square.and.pencil")
+        .help("New Issue")
     }
   }
 }

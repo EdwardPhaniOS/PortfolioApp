@@ -24,7 +24,7 @@ struct IssueViewToolbar: View {
   var body: some View {
     Menu {
       Button {
-        UIPasteboard.general.string = issue.title
+        copyToClipboard()
       } label: {
         Label("Copy Issue Title", systemImage: "doc.on.doc")
       }
@@ -32,13 +32,6 @@ struct IssueViewToolbar: View {
       Button(action: toggleCompleted) {
         Label(openCloseButtonText, systemImage: "bubble.left.and.exclamationmark.bubble.right")
       }
-      //            .sensoryFeedback(trigger: issue.completed) { oldValue, newValue in
-      //                if newValue {
-      //                    .success
-      //                } else {
-      //                    nil
-      //                }
-      //            }
       
       Divider()
       
@@ -90,6 +83,15 @@ struct IssueViewToolbar: View {
         // playing haptics didn't work, but that's okay
       }
     }
+  }
+  
+  func copyToClipboard() {
+#if os(iOS)
+    UIPasteboard.general.string = issue.issueTitle
+#else
+    NSPasteboard.general.prepareForNewContents()
+    NSPasteboard.general.setString(issue.issueTitle, forType: .string)
+#endif
   }
 }
 
