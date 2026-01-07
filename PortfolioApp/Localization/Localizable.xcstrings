@@ -551,6 +551,9 @@
         }
       }
     },
+    "Limit reached" : {
+
+    },
     "Loading..." : {
       "localizations" : {
         "vi" : {
@@ -838,6 +841,9 @@
           }
         }
       }
+    },
+    "Please update to premium to add more" : {
+
     },
     "Priority" : {
       "localizations" : {

@@ -18,6 +18,7 @@ struct KeyboardToolbarDoneButtonViewModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
       .toolbar {
+#if !os(watchOS)
         ToolbarItemGroup(placement: .keyboard) {
           Spacer()
           Button {
@@ -27,6 +28,7 @@ struct KeyboardToolbarDoneButtonViewModifier: ViewModifier {
               .foregroundStyle(Color.appTheme.accent)
           }
         }
+#endif
       }
   }
 }

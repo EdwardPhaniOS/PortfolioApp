@@ -11,6 +11,9 @@ struct ContentViewToolbar: View {
   @EnvironmentObject var dataController: DataController
   
   var body: some View {
+#if os(watchOS)
+    NewIssueButton()
+#else
     Menu {
       Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
         dataController.filterEnabled.toggle()
@@ -56,8 +59,9 @@ struct ContentViewToolbar: View {
     
     Button(action: dataController.newIssue) {
       Label("New Issue", systemImage: "square.and.pencil")
-        .help("New Issue")
     }
+    .help("New Issue")
+#endif
   }
 }
 

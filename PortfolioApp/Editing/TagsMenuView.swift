@@ -12,6 +12,9 @@ struct TagsMenuView: View {
   @ObservedObject var issue: Issue
 
   var body: some View {
+#if os(watchOS)
+    LabeledContent("Tags", value: issue.issueTagsList)
+#else
     Menu {
       // show selected tags first
       ForEach(issue.issueTags) { tag in
@@ -21,13 +24,13 @@ struct TagsMenuView: View {
           Label(tag.tagName, systemImage: "checkmark")
         }
       }
-
+      
       // now show unselected tags
       let otherTags = dataController.missingTags(from: issue)
-
+      
       if otherTags.isEmpty == false {
         Divider()
-
+        
         Section("Add Tags") {
           ForEach(otherTags) { tag in
             Button(tag.tagName) {
@@ -42,6 +45,7 @@ struct TagsMenuView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .animation(nil, value: issue.issueTagsList)
     }
+#endif
   }
 }
 

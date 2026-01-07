@@ -20,11 +20,20 @@ struct StoreView: View {
 
   var body: some View {
     NavigationStack {
+#if !os(watchOS)
       VStack {
         headerView
         productsView
         footerView
       }
+#else
+      VStack(alignment: .leading) {
+        Text("Limit reached")
+          .font(.headline)
+        Text("Please update to premium to add more")
+          .font(.subheadline)
+      }
+#endif
     }
     .onChange(of: dataController.fullVersionUnlocked, { _, _ in
       checkForPurchase()

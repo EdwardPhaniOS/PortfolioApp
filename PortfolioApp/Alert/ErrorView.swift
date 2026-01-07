@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ErrorView: View {
   @Binding var error: Error?
-
+  
   private var appError: AppError {
     error.asAppError()
   }
-
+  
   var body: some View {
     VStack(spacing: 16) {
       headingView
@@ -28,7 +28,7 @@ struct ErrorView: View {
 }
 
 private extension ErrorView {
-
+  
   var headingView: some View {
     HStack {
       Image(systemName: "exclamationmark.triangle.fill")
@@ -38,13 +38,15 @@ private extension ErrorView {
     .fontWeight(.semibold)
     .foregroundStyle(Color.appTheme.error)
   }
-
+  
   var messageView: some View {
     Text(appError.message)
+#if !os(watchOS)
       .foregroundStyle(.secondaryText)
+#endif
       .multilineTextAlignment(.center)
   }
-
+  
   var okButtonView: some View {
     Text("OK")
       .destructiveButton()
@@ -62,7 +64,7 @@ private extension ErrorView {
 
 private struct PreView: View {
   @State var error: Error? = DefaultAppError(title: "Title", message: "Message")
-
+  
   var body: some View {
     ErrorView(error: $error)
       .infinityFrame()

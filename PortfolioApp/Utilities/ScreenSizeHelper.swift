@@ -8,24 +8,28 @@
 import Foundation
 #if os(iOS)
 import UIKit
-#else
+#elseif os(macOS)
 import AppKit
+#elseif os(watchOS)
+import WatchKit
 #endif
 
 struct ScreenSizeHelper {
-  static var screenWidth: CGFloat {
-#if os(iOS)
-    UIScreen.main.bounds.width
-#else
-    NSScreen.main?.frame.width ?? 0
-#endif
-  }
-  
-  static var screenHeight: CGFloat {
-#if os(iOS)
-    UIScreen.main.bounds.height
-#else
-    NSScreen.main?.frame.height ?? 0
-#endif
-  }
+    static var screenBounds: CGRect {
+        #if os(iOS)
+        return UIScreen.main.bounds
+        #elseif os(macOS)
+        return NSScreen.main?.frame ?? .zero
+        #elseif os(watchOS)
+        return WKInterfaceDevice.current().screenBounds
+        #endif
+    }
+    
+    static var screenWidth: CGFloat {
+        return screenBounds.width
+    }
+    
+    static var screenHeight: CGFloat {
+        return screenBounds.height
+    }
 }
