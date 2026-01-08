@@ -31,7 +31,9 @@ struct AlertView: View {
     .padding(12)
     .background(Color.appTheme.cellBackground)
     .cornerRadius(.cell)
+#if !os(visionOS)
     .frame(width: ScreenSizeHelper.screenWidth / 1.2)
+#endif
     .task {
       inputText = appAlert.textFieldConfig?.text ?? .empty
       focusedField = .nameField

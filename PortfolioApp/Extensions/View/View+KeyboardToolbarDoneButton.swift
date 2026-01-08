@@ -18,7 +18,7 @@ struct KeyboardToolbarDoneButtonViewModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
       .toolbar {
-#if !os(watchOS)
+#if os(iOS) && os(macOS)
         ToolbarItemGroup(placement: .keyboard) {
           Spacer()
           Button {

@@ -23,7 +23,9 @@ struct ErrorView: View {
     .padding()
     .background(Color.appTheme.cellBackground)
     .cornerRadius(.cell)
+#if !os(visionOS)
     .frame(width: ScreenSizeHelper.screenWidth / 1.2)
+#endif
   }
 }
 

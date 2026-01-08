@@ -69,7 +69,11 @@ struct IssueView: View {
     }
     .disabled(issue.isDeleted)
     .onReceive(issue.objectWillChange) { _ in
+#if os(visionOS) || os(macOS)
+      dataController.save()
+#else
       dataController.queueSave()
+#endif
     }
     .onSubmit(dataController.save)
     .toolbar {

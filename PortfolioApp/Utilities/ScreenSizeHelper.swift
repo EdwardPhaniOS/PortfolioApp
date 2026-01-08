@@ -15,21 +15,23 @@ import WatchKit
 #endif
 
 struct ScreenSizeHelper {
-    static var screenBounds: CGRect {
-        #if os(iOS)
-        return UIScreen.main.bounds
-        #elseif os(macOS)
-        return NSScreen.main?.frame ?? .zero
-        #elseif os(watchOS)
-        return WKInterfaceDevice.current().screenBounds
-        #endif
-    }
-    
-    static var screenWidth: CGFloat {
-        return screenBounds.width
-    }
-    
-    static var screenHeight: CGFloat {
-        return screenBounds.height
-    }
+  static var screenBounds: CGRect {
+#if os(iOS)
+    return UIScreen.main.bounds
+#elseif os(macOS)
+    return NSScreen.main?.frame ?? .zero
+#elseif os(watchOS)
+    return WKInterfaceDevice.current().screenBounds
+#elseif os(visionOS)
+    return .zero
+#endif
+  }
+  
+  static var screenWidth: CGFloat {
+    return screenBounds.width
+  }
+  
+  static var screenHeight: CGFloat {
+    return screenBounds.height
+  }
 }

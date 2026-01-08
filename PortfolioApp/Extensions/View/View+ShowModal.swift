@@ -82,10 +82,12 @@ private struct Preview: View {
 private struct PreviewModalContentView: View {
   var body: some View {
     Text("Modal View")
+#if !os(visionOS)
       .frame(
         width: ScreenSizeHelper.screenWidth/1.2,
         height: ScreenSizeHelper.screenHeight/2
       )
+#endif
       .foregroundStyle(Color.appTheme.accentContrastText)
       .background(Color.appTheme.accent)
       .cornerRadius(.overall)
