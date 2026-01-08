@@ -72,7 +72,7 @@ extension SidebarView {
 
     func rename(_ filter: Filter) {
       tagToRename = filter.tag
-      tagName = filter.name
+      tagName = filter.tag?.tagName ?? ""
       renamingTag = true
     }
 
