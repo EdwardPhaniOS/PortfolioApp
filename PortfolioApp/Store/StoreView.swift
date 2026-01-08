@@ -15,9 +15,7 @@ struct StoreView: View {
 
   @EnvironmentObject var dataController: DataController
   @Environment(\.dismiss) var dismiss
-#if os(visionOS)
   @Environment(\.purchase) var purchaseAction
-#endif
   @State private var loadState: LoadState = .loading
   @State private var appAlert: AppAlert?
 
@@ -38,9 +36,7 @@ struct StoreView: View {
       }
 #endif
     }
-    .onChange(of: dataController.fullVersionUnlocked, { _, _ in
-      checkForPurchase()
-    })
+    .onChange(of: dataController.fullVersionUnlocked, checkForPurchase)
     .task {
       await load()
     }
@@ -152,14 +148,10 @@ extension StoreView {
     }
 
     Task { @MainActor in
-#if os(visionOS)
       let result = try await purchaseAction(product)
       if case let .success(validation) = result {
         try await dataController.finalize(validation.payloadValue)
       }
-#else
-      try await dataController.purchase(product)
-#endif
     }
   }
 

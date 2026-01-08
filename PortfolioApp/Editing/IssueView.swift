@@ -80,12 +80,8 @@ struct IssueView: View {
       IssueViewToolbar(issue: issue)
     }
     .showAlert(item: $appAlert)
-    .onChange(of: issue.reminderEnabled) { _ in
-      updateReminder()
-    }
-    .onChange(of: issue.reminderTime) { _ in
-      updateReminder()
-    }
+    .onChange(of: issue.reminderEnabled, updateReminder)
+    .onChange(of: issue.reminderTime, updateReminder)
     .formStyle(.grouped)
   }
 

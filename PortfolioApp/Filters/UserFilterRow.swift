@@ -12,9 +12,11 @@ struct UserFilterRow: View {
   var rename: (Filter) -> Void
   var delete: (Filter) -> Void
   
+  @EnvironmentObject var dataController: DataController
+  
   var body: some View {
     NavigationLink(value: filter) {
-      Label(filter.name, systemImage: filter.icon)
+      Label(filter.tag?.tagName ?? "No name", systemImage: filter.icon)
         .numberBadge(filter.activeIssuesCount)
         .contextMenu {
           Button {

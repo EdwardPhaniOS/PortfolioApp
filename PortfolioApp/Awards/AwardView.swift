@@ -75,5 +75,6 @@ struct AwardsView: View {
 #Preview {
   NavigationView {
     AwardsView()
+      .environmentObject(DataController(inMemory: true))
   }
 }
